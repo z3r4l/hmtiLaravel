@@ -1,0 +1,196 @@
+.active {
+    color: #185adb !important;
+}
+.text-header {
+    color: #185adb;
+}
+.body-struktur {
+    background-color: #fff !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.body-struktur:hover {
+    transform: scale(0.96);
+    transition: 0.4s;
+}
+.button-color {
+    background-color: #185adb !important;
+}
+
+/* START BUTTON BERANDA */
+a.finbyz-button {
+    color: #1aa8e2;
+    text-decoration: none;
+    background-color: #185adb;
+    color: #fff;
+    -webkit-transition: 0.3s all ease;
+    transition: 0.3s ease all;
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: inline-block;
+    text-align: center;
+    width: 220px;
+    font-weight: bold;
+    padding: 14px 0;
+    border: 3px solid #ffff;
+    border-radius: 30px;
+    position: relative;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+a.finbyz-button:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #ffff;
+
+    z-index: -1;
+    border-radius: 40px;
+}
+a.finbyz-button:hover,
+a.finbyz-button:focus {
+    transform: scale(0.95);
+    transition: 0.9s;
+    color: #185adb;
+    border: 3px solid #185adb;
+    font-size: 13px;
+    font-weight: bold !important;
+}
+a.finbyz-button:hover:before,
+a.finbyz-button:focus:before {
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+}
+
+/* END BUTTON BERANDA */
+/* Start Stick */
+.stick {
+    margin-top: -60px;
+}
+.card-stick {
+    background-color: whitesmoke;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
+/* End Stick */
+
+/* START KEGIATAN BERANDA */
+.card-activity {
+    margin-top: 200px;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.activity {
+    background-color: rgba(0, 0, 0, 0.4);
+    margin-top: 100px;
+}
+.card-beranda:hover {
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+/* End KEGIATAN BERANDA */
+
+/* START KEGIATAN */
+.row-card {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.card-box {
+    flex: 1 1 21rem;
+    display: flex;
+    align-items: start;
+    margin: 10px 20px;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    align-self: normal;
+}
+.card-box:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+.card-box h5 {
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.card-box p {
+    margin-bottom: 10px;
+}
+.card-img {
+    max-width: 800px;
+}
+
+/* End KEGIATAN TERBARU */
+
+/* START VISI DAN MISI */
+.visimisi {
+    text-align: justify;
+}
+/* END VISI DAN MISI */
+/* START DEVISI */
+.card-divisi-body {
+    background: #ffffff;
+    box-shadow: inset 5px 5px#185adb, inset -5px -5px #ffffff;
+}
+.card-divisi-body:hover {
+    transform: scale(1.03);
+    transition: 0.4s;
+}
+.card-icon {
+    display: flex;
+    justify-content: center;
+}
+/* END DEVISI */
+
+/* START EVENT AKAN DATANG  */
+.wrapper {
+    max-height: 1200px;
+    box-shadow: 1px solid black;
+    display: flex;
+    overflow: auto;
+}
+.wrapper .item {
+    min-width: 400px;
+    height: 510px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        left top,
+        color-stop(0.44, rgb(122, 153, 217)),
+        color-stop(0.72, rgb(73, 125, 189)),
+        color-stop(0.86, rgb(28, 58, 148))
+    );
+}
+.wrapper::-webkit-scrollbar-track {
+    border-radius: 20px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+/* END EVENT AKAN DATANG */
+
+/* START FOOTER */
+.footer {
+    background-color: #185adb;
+    color: #ffff;
+}
+/* END FOOTER */

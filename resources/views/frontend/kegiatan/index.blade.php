@@ -7,23 +7,7 @@
     <h3 class="text-center fw-bold my-4"><span class="text-header d-block">KEGIATAN</span>HMTI UNIVERSITAS IBNU SINA
     </h3>
     <div class="row">
-
-        <div class="container">
-            <div class="row row-card">
-                @foreach ($posts as $p)
-                <div class="col-lg-4 col-12">
-                    <div class="card-box p-4">
-                        <img src="/img/hero-image.jpeg" class="card-img-top card-img" alt="...">
-                        <h5 class="">{{ Str::limit($p->title,30) }}</h5>
-                        <p class="">{!!Str::limit( $p->body , 80)!!}</p>
-                        <a href="/posts/{{ $p->slug }}"
-                            class="text-decoration-none btn button-color text-light d-inline-block">Read
-                            More..</a>
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
+        @include('frontend.partials.cardKegiatan.index')
     </div>
 </div>
 <div class="container d-flex justify-content-end">

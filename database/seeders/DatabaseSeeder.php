@@ -5,7 +5,6 @@ namespace Database\Seeders;
 use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
-use App\Models\WillPosts;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +16,14 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
+        User::create([
+            'name' => 'ZeraL',
+            'username' => 'Zeral',
+            'email' => 'zeri.aldi@gmail.com',
+            'password' => bcrypt('password')
+        ]);
+
         User::factory(3)->create();
 
         Category::create([
@@ -36,6 +43,5 @@ class DatabaseSeeder extends Seeder
 
 
         Post::factory(25)->create();
-        WillPosts::factory(20)->create();
     }
 }

@@ -141,17 +141,25 @@ a.finbyz-button:focus:before {
 /* END VISI DAN MISI */
 /* START DEVISI */
 .card-divisi-body {
-    background: #ffffff;
-    box-shadow: inset 5px 5px#185adb, inset -5px -5px #ffffff;
+    background-color: #fff !important;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
 }
 .card-divisi-body:hover {
     transform: scale(1.03);
+    transition: 0.4s;
+}
+.image-divisi:hover {
+    transform: scale(1.1);
     transition: 0.4s;
 }
 .card-icon {
     display: flex;
     justify-content: center;
 }
+.card-link {
+    color: #185adb !important;
+}
+
 /* END DEVISI */
 
 /* START EVENT AKAN DATANG  */

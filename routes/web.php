@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\DivisiController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\DivisiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,3 +32,16 @@ Route::get('/tentang', function () {
 });
 Route::get('/divisi/litbang', [DivisiController::class, 'litbang']);
 Route::get('/divisi/program', [DivisiController::class, 'program']);
+
+
+// Page Backend
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login', [LoginController::class, 'authenticate']);
+
+
+Route::get('/dashboard', function () {
+    return view('backend.dashboard.index', [
+        'title' => 'Halaman Dashboard',
+        'active' => 'dashboard'
+    ]);
+})->middleware('auth');

@@ -97,6 +97,9 @@ a.finbyz-button:focus:before {
     transform: scale(1.03);
     transition: 0.4s;
 }
+.card-img {
+    max-width: 800px;
+}
 /* End KEGIATAN BERANDA */
 
 /* START KEGIATAN */
@@ -128,8 +131,10 @@ a.finbyz-button:focus:before {
 .card-box p {
     margin-bottom: 10px;
 }
-.card-img {
+
+.card-img-kegiatan {
     max-width: 800px;
+    height: 200px;
 }
 
 /* End KEGIATAN TERBARU */

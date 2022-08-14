@@ -61,7 +61,8 @@
         <div class="col-md-4 themed-grid-col ">
             <a href="/posts/{{$posts[0]->slug }}">
                 <div class="card text-bg-dark mt-3 card-beranda">
-                    <img src="/img/hero-image.jpeg" class="card-img" height="465" width="200" alt="Gambar">
+                    <img src="{{ asset('storage/'.$posts[0]->image) }}" class="card-img" height="465" width="200"
+                        alt="Gambar">
                     <div class="card-img-overlay card-activity">
                         <div class="card-body ">
                             <h5 class="card-title">{{ $posts[0]->title }}</h5>
@@ -81,7 +82,8 @@
                 <a href="/posts/{{ $row->slug }}">
                     <div class="col mt-3">
                         <div class="card text-bg-dark card-beranda">
-                            <img src="/img/hero.jpg" class="card-img" height="225" width="150" alt="Gambar">
+                            <img src="{{ asset('storage/'.$row->image) }}" class="card-img" height="225" width="150"
+                                alt="Gambar Kegiatan">
                             <div class="card-img-overlay activity">
                                 <h5 class="card-title">{{ $row->title }}</h5>
                                 <p class="card-text"><i class="bi bi-calendar"></i> <small>{{

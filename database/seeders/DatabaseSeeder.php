@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('password')
         ]);
 
-        User::factory(3)->create();
+        // User::factory(3)->create();
 
         Category::create([
             'name' => 'Study Club',
@@ -42,6 +42,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        Post::factory(25)->create();
+        // Post::factory(25)->create();
     }
 }

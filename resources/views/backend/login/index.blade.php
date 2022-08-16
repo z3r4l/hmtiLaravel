@@ -10,6 +10,16 @@
     <!-- Custom styles for this template -->
     <link href="/css/signin.css" rel="stylesheet">
 </head>
+<style>
+    .login-btn {
+        background-color: yellow;
+        font-weight: bold;
+    }
+
+    .login-btn:hover {
+        background-color: greenyellow;
+    }
+</style>
 
 <body class="text-center">
     @if (session()->has('success'))
@@ -31,8 +41,8 @@
     <main class="form-signin w-100 m-auto">
         <form action="/login" method="post">
             @csrf
-            <img class="mb-4" src="img/hmti.jpeg" alt="" width="300" height="200">
-            <h1 class="h3 mb-3 fw-normal text-uppercase">Login TO Dashboard</h1>
+            <img class="mb-2" src="img/hmti.jpeg" alt="" width="250" height="250">
+            <h1 class="h3 mb-3 fw-bold text-uppercase">Login TO Dashboard</h1>
             <div class="form-floating">
                 <input type="email" class="form-control @error('email')
                     is-invalid
@@ -49,7 +59,7 @@
                     required>
                 <label for="password">Password</label>
             </div>
-            <button class="w-100 btn btn-lg btn-primary" type="submit">LogIn</button>
+            <button class="w-100 btn btn-lg login-btn text-uppercase" type="submit">LogIn</button>
         </form>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

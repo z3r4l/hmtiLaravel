@@ -12,14 +12,9 @@
                 <button class="btn btn-danger" onclick="return confirm('are you sure you want to delete')"><i
                         class="bi bi-x-circle-fill"></i>Hapus</button>
             </form>
-
-            @if ($post->image)
             <img src="{{ asset('storage/'.$post->image) }}" class="img-fluid my-3" width="1200" height="400"
                 class="card-img-top" alt="...">
-            @else
-            <img src="https://source.unsplash.com/1200x400?{{ $post->category->name }}" class="img-fluid my-3"
-                width="1200" height="400" class="card-img-top" alt="...">
-            @endif
+
             <article class="my-3 fs-5">
                 <p>{!! $post->body !!}</p>
             </article>

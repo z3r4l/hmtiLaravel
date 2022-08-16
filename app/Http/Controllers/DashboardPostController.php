@@ -18,7 +18,8 @@ class DashboardPostController extends Controller
     public function index()
     {
         return view('backend.dashboard.posts.index', [
-            'posts' => Post::where('user_id', auth()->user()->id)->get()
+            'posts' => Post::where('user_id', auth()->user()->id)->get(),
+            'post' => Post::with(['author', 'category'])->latest()->paginate(10)
         ]);
     }
 
@@ -50,10 +51,9 @@ class DashboardPostController extends Controller
             'body' => 'required'
         ]);
 
-        // kondisi jika boleh diboleh upload image kosong
-        if ($request->file('image')) {
-            $validatedData['image'] = $request->file('image')->store('post-images');
-        }
+
+        $validatedData['image'] = $request->file('image')->store('post-images');
+
         // 
         $validatedData['user_id'] = auth()->user()->id;
         $validatedData['excerpt'] = Str::limit(strip_tags($request->body), 200);

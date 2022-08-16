@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\WillPosts;
+use App\Models\Struktur;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -13,7 +13,9 @@ class PostController extends Controller
         return view('frontend.beranda.index', [
             'posts' => Post::with(['author', 'category'])->latest()->paginate(),
             'postsLimit' => Post::with(['author', 'category'])->latest()->offset(1)->limit(4)->get(),
-            'jumlahRepository' => Post::all()->count()
+            'jumlahRepository' => Post::all()->count(),
+            'jumlahAnggota' => Struktur::all()->count(),
+            'struktur' => Struktur::where('divisi_id', '1')->limit(3)->get()
         ]);
     }
     public function show(Post $post)

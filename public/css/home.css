@@ -6,7 +6,7 @@
 }
 .body-struktur {
     background-color: #fff !important;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }
 .body-struktur:hover {
     transform: scale(0.96);
@@ -116,7 +116,7 @@ a.finbyz-button:focus:before {
     margin: 10px 20px;
     flex-direction: column;
     background: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     padding: 10px 20px;
     align-self: normal;
 }
@@ -147,7 +147,7 @@ a.finbyz-button:focus:before {
 /* START DEVISI */
 .card-divisi-body {
     background-color: #fff !important;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 .card-divisi-body:hover {
     transform: scale(1.03);

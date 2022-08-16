@@ -12,18 +12,22 @@
         <a class="nav-link {{ Request::is('kegiatan') ? 'active' : '' }}" href="{{ url('/kegiatan') }}">Kegiatan</a>
         <a class="nav-link {{ Request::is('struktur') ? 'active' : '' }}" href="{{ url('/struktur') }}">Struktur</a>
         <a class="nav-link {{ Request::is('tentang') ? 'active' : '' }}" href="{{ url('/tentang') }}">Tentang</a>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle {{ Request::is('divisi*') ? 'active' : '' }}" href="#" role="button"
-            data-bs-toggle="dropdown" aria-expanded="false">
-            Divisi
-          </a>
-          <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="/divisi/litbang">Divisi Litbang</a></li>
-            <li><a class="dropdown-item" href="/divisi/program">Divisi Program</a></li>
-            <li><a class="dropdown-item" href="#">Divisi Humas</a></li>
-            <li><a class="dropdown-item" href="#">Divisi Media</a></li>
-          </ul>
-        </li>
+        <ul class="navbar-nav">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle {{ Request::is('divisi*') ? 'active' : '' }}" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Divisi
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="/divisi/litbang">Divisi Litbang</a></li>
+              <li><a class="dropdown-item" href="/divisi/program">Divisi Program</a></li>
+              <li><a class="dropdown-item" href="/divisi/humas">Divisi Humas</a></li>
+              <li><a class="dropdown-item" href="/divisi/media">Divisi Media</a></li>
+            </ul>
+          </li>
+        </ul>
+
+
       </div>
     </div>
   </div>

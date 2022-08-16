@@ -1,6 +1,9 @@
 body {
     font-size: 0.875rem;
 }
+.dashboard-color {
+    background-color: yellowgreen;
+}
 
 .feather {
     width: 16px;
@@ -94,4 +97,13 @@ body {
 /* Meatikan fitur mengirim file */
 trix-toolbar [data-trix-button-group="file-tools"] {
     display: none;
+}
+
+.body-struktur {
+    background-color: #fff !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.body-struktur:hover {
+    transform: scale(0.96);
+    transition: 0.4s;
 }

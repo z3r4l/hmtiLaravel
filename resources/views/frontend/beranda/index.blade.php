@@ -36,7 +36,7 @@
                             d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
                     </svg>
                     <small class="d-block ms-5 text-muted">
-                        <span class="fw-bold text-dark">00</span> Anggota Aktif
+                        <span class="fw-bold text-dark">{{ $jumlahAnggota }}</span> Anggota Aktif
                     </small>
                 </div>
                 <div class="col-lg text-center">
@@ -114,57 +114,23 @@
     <div class="row">
         <div class="container">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-4">
-
+                @foreach ($struktur as $row)
                 <div class="col mt-4">
                     <div
                         class="shadow-lg d-flex justify-content-center align-items-center p-3 rounded-4 body-struktur flex-column">
                         <div class="person-img">
-                            <img src="https://i.postimg.cc/jj555C3t/alip.jpg" width="300" height="300"
+                            <img src="{{ asset('storage/' . $row->image) }}" width="300" height="300"
                                 class="rounded-circle" alt="...">
                         </div>
                         <div class="person-name my-3">
-                            <h4 class="text-dark text-uppercase fw-bold">Alif sahputra</h4>
+                            <h4 class="text-dark text-uppercase fw-bold">{{ $row->name }}</h4>
                         </div>
                         <div class="info">
-                            <h6 class="text-dark text-uppercase fw-bold">ketua hmti 2022 - 2023</h6>
+                            <h6 class="text-dark text-uppercase fw-bold">{{ $row->jabatan }}</h6>
                         </div>
                     </div>
                 </div>
-
-
-                <div class="col mt-4">
-                    <div
-                        class="shadow-lg d-flex justify-content-center align-items-center p-3 rounded-4 body-struktur flex-column">
-                        <div class="person-img">
-                            <img src="https://i.postimg.cc/Y08f1v78/panji.jpg" width="300" height="300"
-                                class="rounded-circle" alt="...">
-                        </div>
-                        <div class="person-name my-3">
-                            <h4 class="text-dark text-uppercase fw-bold">Panji Petualang</h4>
-                        </div>
-                        <div class="info">
-                            <h6 class="text-dark text-uppercase fw-bold">ketua hmti 2023 - 2024</h6>
-                        </div>
-                    </div>
-                </div>
-
-
-
-                <div class="col mt-4">
-                    <div
-                        class="shadow-lg d-flex justify-content-center align-items-center p-3 rounded-4 body-struktur flex-column">
-                        <div class="person-img">
-                            <img src="https://i.postimg.cc/ZKRDwSQ0/madan.jpg" width="300" height="300"
-                                class="rounded-circle" alt="...">
-                        </div>
-                        <div class="person-name my-3">
-                            <h4 class="text-dark text-uppercase fw-bold">MAdan</h4>
-                        </div>
-                        <div class="info">
-                            <h6 class="text-dark text-uppercase fw-bold">ketua hmti 2024 - 2025</h6>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
             </div>
         </div>

@@ -39,7 +39,21 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="image" class="form-label">Post Image</label>
+            <label for="link" class="form-label">Link Youtube</label>
+            <input type="text" class="form-control @error('link')
+                is-invalid
+            @enderror" id="link" name="link" required value="{{ old('link') }}">
+            @error('link')
+            <div class="invalid-feedback">
+                {{ $message }}
+            </div>
+            @enderror
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">
+                Post Image
+                <small><u>Recomended : 750X400</u></small>
+            </label>
             <img class="img-preview img-fluid mb-3 col-sm-5 d-block" src="" alt="">
             <input class="form-control @error('image')
                 is-invalid
@@ -55,7 +69,7 @@
             @error('body')
             <p class="text-danger">{{ $message }}</p>
             @enderror
-            <input id="body" type="hidden" name="body" required>
+            <input id="body" type="hidden" name="body" value="{{ old('body') }}" required>
             <trix-editor input="body"></trix-editor>
         </div>
 

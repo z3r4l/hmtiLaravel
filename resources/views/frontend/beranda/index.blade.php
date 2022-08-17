@@ -65,12 +65,12 @@
                         alt="Gambar">
                     <div class="card-img-overlay card-activity">
                         <div class="card-body ">
-                            <h5 class="card-title">{{ $posts[0]->title }}</h5>
+                            <h6 class="card-title">{{ $posts[0]->title }}</h6>
                             <p class="card-text"><i class="bi bi-calendar"></i> <small>{{
                                     $posts[0]->created_at->diffForHumans()
                                     }}</small>
                             </p>
-                            <p class="card-text">{{ Str::limit($posts[0]->excerpt,180)}}</p>
+                            <small class="card-text">{{ Str::limit($posts[0]->excerpt,180)}}</small>
                         </div>
                     </div>
                 </div>

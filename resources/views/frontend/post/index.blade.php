@@ -24,7 +24,7 @@
             <hr>
 
             <!-- Date/Time -->
-            <p>Posted on {{ $post->created_at->isoFormat('dddd, D MMMM Y H:M')}}</p>
+            <p>Postingan Hari {{ $post->created_at->isoFormat('dddd, D MMMM Y | hh:mm:ss')}}</p>
 
             <hr>
 
@@ -64,7 +64,7 @@
             <div class="card my-4">
                 <h5 class="card-header background-color text-light text-center">Video Dokumentasi</h5>
                 <div class="card-body">
-                    <iframe width="330" height="250" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    <iframe width="330" height="250" src="{{ $post->link }}">
                     </iframe>
                 </div>
             </div>

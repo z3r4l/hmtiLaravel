@@ -20,10 +20,17 @@ class DatabaseSeeder extends Seeder
     {
 
         User::create([
-            'name' => 'ZeraL',
-            'username' => 'Zeral',
-            'email' => 'zeri.aldi@gmail.com',
-            'password' => bcrypt('password')
+            'name' => 'program',
+            'username' => 'program',
+            'email' => 'program@gmail.com',
+            'password' => bcrypt('onefamilyonegoal2013')
+        ]);
+
+        User::create([
+            'name' => 'HMTI',
+            'username' => 'HMTI',
+            'email' => 'hmti@uis.ac.id',
+            'password' => bcrypt('onefamilyonegoal2013')
         ]);
 
         Struktur::create([
@@ -78,6 +85,17 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Rapat',
             'slug' => 'rapat'
+        ]);
+
+        Category::create([
+            'name' => 'Seminar',
+            'slug' => 'seminar'
+        ]);
+
+
+        Category::create([
+            'name' => 'Workshop',
+            'slug' => 'workshop'
         ]);
 
 

@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\Struktur;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 
 class PostController extends Controller
 {
@@ -15,13 +17,14 @@ class PostController extends Controller
             'postsLimit' => Post::with(['author', 'category'])->latest()->offset(1)->limit(4)->get(),
             'jumlahRepository' => Post::all()->count(),
             'jumlahAnggota' => Struktur::all()->count(),
-            'struktur' => Struktur::where('divisi_id', '1')->limit(3)->get()
+            'struktur' => Struktur::where('divisi_id', '1')->limit(3)->get(),
         ]);
     }
     public function show(Post $post)
     {
         return view('frontend.post.index', [
             'post' => $post,
+            'category' => Category::all(),
         ]);
     }
 }

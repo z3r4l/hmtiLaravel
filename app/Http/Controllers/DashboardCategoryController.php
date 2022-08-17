@@ -2,23 +2,21 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Divisi;
-use App\Models\Struktur;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
-class DashboardDivisiController extends Controller
+class DashboardCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Divisi $divisi)
+    public function index()
     {
-        return view('backend.dashboard.divisi.index', [
-            'divisies' => Divisi::all(),
-
+        return view('backend.dashboard.category.index', [
+            'category' => Category::all()
         ]);
     }
 
@@ -29,7 +27,7 @@ class DashboardDivisiController extends Controller
      */
     public function create()
     {
-        //
+        return view('backend.dashboard.category.create');
     }
 
     /**
@@ -40,34 +38,37 @@ class DashboardDivisiController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'slug' => 'required|unique:posts',
+        ]);
+
+        Category::create($validatedData);
+
+        return redirect('/dashboard/category')->with('success', 'Category berhasil di tambahkan');
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Divisi  $divisi
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Divisi $divisi)
+    public function show(Category $category)
     {
-        return view('backend.dashboard.divisi.show', [
-            'divisies' => $divisi,
-            'struktur' => $divisi->struktur->load('divisi')
-        ]);
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Divisi  $divisi
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Divisi $divisi)
+    public function edit(Category $category)
     {
-        return view('backend.dashboard.divisi.edit', [
-            'divisi' => $divisi,
-            'struktur' => Struktur::all()
+        return view('backend.dashboard.category.edit', [
+            'category' => $category
         ]);
     }
 
@@ -75,18 +76,16 @@ class DashboardDivisiController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Divisi  $divisi
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Divisi $divisi)
+    public function update(Request $request, Category $category)
     {
         $rules = [
             'name' => 'required|max:255',
-            'image' => 'image|file|max:1024|mimes:jpeg,jpg',
-            'body' => 'required'
         ];
 
-        if ($request->slug != $divisi->slug) {
+        if ($request->slug != $category->slug) {
             $rules['slug'] = 'required|unique:divisis';
         }
 
@@ -95,12 +94,12 @@ class DashboardDivisiController extends Controller
         // kondisi jika boleh diboleh upload image kosong
 
         if ($request->file('image')) {
-            Storage::delete($divisi->image);
+            Storage::delete($category->image);
             $validatedData['image'] = $request->file('image')->store('post-images');
         }
 
 
-        Divisi::where('id', $divisi->id)
+        Category::where('id', $category->id)
             ->update($validatedData);
 
 
@@ -110,11 +109,14 @@ class DashboardDivisiController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Divisi  $divisi
+     * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Divisi $divisi)
+    public function destroy(Category $category)
     {
-        //
+
+        Category::destroy($category->id);
+
+        return redirect('/dashboard/category')->with('success', 'Category Berhasil Di Hapus');
     }
 }

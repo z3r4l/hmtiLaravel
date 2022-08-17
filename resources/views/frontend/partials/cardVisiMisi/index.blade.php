@@ -5,7 +5,7 @@
         <img src="/img/img-visimisi.jpeg" alt="Gambar Visi Misi" width="440" height="330" class="">
     </div>
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-4">
             <p>
                 Menjadikan HMTI sebagai organisasi akademik unggulan yang mampu meningkatkan kemampuan mahasiswa yang
                 kreatif,

@@ -1,14 +1,17 @@
 <?php
 
 use App\Models\Post;
+use App\Models\Category;
+use App\Models\Struktur;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\DivisiController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DashboardPostController;
 use App\Http\Controllers\DashboardDivisiController;
+use App\Http\Controllers\DashboardCategoryController;
 use App\Http\Controllers\DashboardStrukturController;
-use App\Models\Struktur;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +32,7 @@ Route::get('/kegiatan', function () {
     ]);
 });
 
+
 Route::get('/struktur', function () {
     return view('frontend.struktur.index', [
         'struktur' => Struktur::where('divisi_id', '1')->get()
@@ -37,6 +41,8 @@ Route::get('/struktur', function () {
 Route::get('/tentang', function () {
     return view('frontend.tentang.index');
 });
+
+Route::get('/categories/{category:slug}', [CategoryController::class, 'index']);
 
 Route::get('/divisi/litbang', [DivisiController::class, 'litbang']);
 Route::get('/divisi/program', [DivisiController::class, 'program']);
@@ -59,3 +65,4 @@ Route::get('/dashboard', function () {
 Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
 Route::resource('/dashboard/strukturs', DashboardStrukturController::class)->middleware('auth');
 Route::resource('/dashboard/divisi', DashboardDivisiController::class)->middleware('auth');
+Route::resource('/dashboard/category', DashboardCategoryController::class)->middleware('auth');

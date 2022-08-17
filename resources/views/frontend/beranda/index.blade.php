@@ -70,7 +70,7 @@
                                     $posts[0]->created_at->diffForHumans()
                                     }}</small>
                             </p>
-                            <p class="card-text">{{ Str::limit($posts[0]->excerpt,100)}}</p>
+                            <p class="card-text">{{ Str::limit($posts[0]->excerpt,180)}}</p>
                         </div>
                     </div>
                 </div>

@@ -49,7 +49,7 @@ class DashboardStrukturController extends Controller
             'slug' => 'required|unique:strukturs',
             'jabatan' => 'required|max:255',
             'divisi_id' => 'required',
-            'image' => 'image|file|max:512|mimes:jpeg,jpg'
+            'image' => 'image|file|max:1024|mimes:jpeg,jpg'
         ]);
 
         $validateData['image'] = $request->file('image')->store('post-images');
@@ -101,7 +101,7 @@ class DashboardStrukturController extends Controller
             'name' => 'required|max:255',
             'jabatan' => 'required|max:255',
             'divisi_id' => 'required',
-            'image' => 'image|file|max:512|mimes:jpeg,jpg'
+            'image' => 'image|file|max:1024|mimes:jpeg,jpg'
         ];
 
         if ($request->slug != $struktur->slug) {

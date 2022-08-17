@@ -11,7 +11,7 @@
 
         @endforeach
     </div>
-    <h3 class="text-center fw-bold my-3"><span class="text-header d-block">STRUKTUR {{ $title }}</span>HMTIa
+    <h3 class="text-center fw-bold my-3"><span class="text-header d-block">STRUKTUR {{ $title }}</span>HMTI
         UNIVERSITAS IBNU SINA
     </h3>
     <div class="row">

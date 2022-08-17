@@ -2,7 +2,7 @@
 @section('content')
 <div
     class="col-lg-10 d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-    <h1 class="h2">Halaman Divisi</h1>
+    <h1 class="h2">Halaman Info Divisi</h1>
 </div>
 @if (session()->has('success'))
 <div class="alert alert-success" role="alert">

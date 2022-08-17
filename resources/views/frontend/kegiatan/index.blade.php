@@ -10,7 +10,7 @@
         @include('frontend.partials.cardKegiatan.index')
     </div>
 </div>
-<div class="container d-flex justify-content-end">
+<div class="container d-flex justify-content-end mt-4">
     {{ $posts->links() }}
 </div>
 @endsection

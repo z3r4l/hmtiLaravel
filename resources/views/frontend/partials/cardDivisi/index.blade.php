@@ -42,7 +42,7 @@
                         seluruh
                         program
                         kerja kegiatan-kegiatan yang berhubungan</p>
-                    <a href="#" class="card-link fw-bold text-decoration-none">Baca Selengkapnya</a>
+                    <a href="/divisi/media" class="card-link fw-bold text-decoration-none">Baca Selengkapnya</a>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                         mengkomunikasikan
                         segala
                         bentuk informasi tentang organisasi baik kepada publik</p>
-                    <a href="#" class="card-link fw-bold text-decoration-none">Baca Selengkapnya</a>
+                    <a href="/divisi/humas" class="card-link fw-bold text-decoration-none">Baca Selengkapnya</a>
                 </div>
             </div>
         </div>

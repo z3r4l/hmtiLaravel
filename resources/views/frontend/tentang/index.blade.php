@@ -6,11 +6,12 @@
     </h3>
     <div class="row mb-3">
         <div class="col-md-6 themed-grid-col ">
-            <img src="https://source.unsplash.com/500x400" class="card-img rounded" height="610" width="200" alt="...">
+            <img src="https://source.unsplash.com/500x400" class="card-img rounded mt-2" height="610" width="200"
+                alt="...">
         </div>
         <div class="col-md-6 themed-grid-col">
             <div class="row row-cols-2">
-                <img src="https://source.unsplash.com/500x400" class="card-img rounded" height="300" width="300"
+                <img src="https://source.unsplash.com/500x400" class="card-img rounded mt-2" height="300" width="300"
                     alt="...">
                 <img src="https://source.unsplash.com/500x400" class="card-img rounded mt-2" height="300" width="300"
                     alt="...">

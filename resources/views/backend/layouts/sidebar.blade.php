@@ -29,6 +29,13 @@
                     Divisi
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/category*') ? 'active dashboard-color text-white' : '' }}"
+                    href="/dashboard/category">
+                    <i class="bi bi-grid-3x3"></i>
+                    Category
+                </a>
+            </li>
         </ul>
 
     </div>

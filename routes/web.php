@@ -44,25 +44,25 @@ Route::get('/tentang', function () {
 
 Route::get('/categories/{category:slug}', [CategoryController::class, 'index']);
 
-Route::get('/divisi/litbang', [DivisiController::class, 'litbang']);
-Route::get('/divisi/program', [DivisiController::class, 'program']);
-Route::get('/divisi/media', [DivisiController::class, 'media']);
-Route::get('/divisi/humas', [DivisiController::class, 'humas']);
-
+Route::get('/divisi/{divisi:slug}', [DivisiController::class, 'index']);
 
 // Page Backend
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::get('/dashboard', function () {
-    return view('backend.dashboard.index', [
-        'title' => 'Halaman Dashboard',
-        'active' => 'dashboard'
-    ]);
-})->middleware('auth');
+Route::middleware('auth')->group(function(){
+    Route::get('/dashboard', function () {
+        return view('backend.dashboard.index', [
+            'title' => 'Halaman Dashboard',
+            'active' => 'dashboard'
+        ]);
+    });
+    
+    Route::resource('/dashboard/posts', DashboardPostController::class);
+    Route::resource('/dashboard/strukturs', DashboardStrukturController::class);
+    Route::resource('/dashboard/divisi', DashboardDivisiController::class);
+    Route::resource('/dashboard/category', DashboardCategoryController::class);
+});
 
-Route::resource('/dashboard/posts', DashboardPostController::class)->middleware('auth');
-Route::resource('/dashboard/strukturs', DashboardStrukturController::class)->middleware('auth');
-Route::resource('/dashboard/divisi', DashboardDivisiController::class)->middleware('auth');
-Route::resource('/dashboard/category', DashboardCategoryController::class)->middleware('auth');
+

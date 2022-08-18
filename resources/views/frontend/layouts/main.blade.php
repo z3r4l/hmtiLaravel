@@ -4,8 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="HMTI UIS">
+  <meta name="description" content="Website Tentang HMTI UIS">
+  <meta name="keywords" content="HMTI UIS Adalah">
   <title>DEVELOPMENT</title>
-  <link rel="stylesheet" href="/css/home.css">
+  <link rel=" stylesheet" href="/css/home.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
   <link rel="icon" type="image" href="img/hmti.jpeg">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"

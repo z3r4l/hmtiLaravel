@@ -1,20 +1,21 @@
 @extends('frontend.layouts.main')
 @section('content')
 {{-- START ABOUT IMAGE --}}
-<div class="container mt-5">
+<div class="container mt-5" id="tentang">
     <h3 class="text-center fw-bold mt-4"><span class="text-header d-block">TENTANG HMTI</span> UNIVERSITAS IBNU SINA
     </h3>
     <div class="row mb-3">
         <div class="col-md-6 themed-grid-col ">
-            <img src="https://source.unsplash.com/500x400" class="card-img rounded mt-2" height="610" width="200"
-                alt="...">
+            <img src="/img/tentang1.jpeg" class="img-fluid card-img rounded mt-2" height="610" width="200" alt="...">
+            <img src="/img/tentang4.jpeg" class="img-fluid card-img rounded mt-2" height="300" width="300" alt="...">
         </div>
         <div class="col-md-6 themed-grid-col">
             <div class="row row-cols-2">
-                <img src="https://source.unsplash.com/500x400" class="card-img rounded mt-2" height="300" width="300"
+                <img src="/img/tentang2.jpeg" class="img-fluid card-img rounded mt-2" height="300" width="300"
                     alt="...">
-                <img src="https://source.unsplash.com/500x400" class="card-img rounded mt-2" height="300" width="300"
+                <img src="/img/tentang3.jpeg" class="img-fluid card-img rounded mt-2" height="300" width="300"
                     alt="...">
+
 
             </div>
         </div>

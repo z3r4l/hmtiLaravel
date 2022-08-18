@@ -15,38 +15,24 @@
 {{-- START STICKY --}}
 <div class="container stick">
     <div class="row d-flex justify-content-center">
-        <div class="col-lg-10 card-stick">
+        <div class="col-lg-10 col-10 card-stick">
             <div class="row">
-                <div class="col-lg text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                        class="bi bi-card-list " viewBox="0 0 16 16">
-                        <path
-                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
-                        <path
-                            d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z" />
-                    </svg>
+                <div class="col-lg col-4 card-stick-info text-center">
+                    <i class="bi bi-card-list"></i>
                     <small class="d-block ms-5 text-muted">
-                        <span class="fw-bold text-dark">00 </span>Kegiatan Aktif
+                        <span class="fw-bold card-stick-text text-dark">00 </span>Kegiatan Aktif
                     </small>
                 </div>
-                <div class="col-lg text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                        class="bi bi-people" viewBox="0 0 16 16">
-                        <path
-                            d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1h8zm-7.978-1A.261.261 0 0 1 7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002a.274.274 0 0 1-.014.002H7.022zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0zM6.936 9.28a5.88 5.88 0 0 0-1.23-.247A7.35 7.35 0 0 0 5 9c-4 0-5 3-5 4 0 .667.333 1 1 1h4.216A2.238 2.238 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816zM4.92 10A5.493 5.493 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275zM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0zm3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z" />
-                    </svg>
+                <div class="col-lg col-4 card-stick-info text-center">
+                    <i class="bi bi-people"></i>
                     <small class="d-block ms-5 text-muted">
-                        <span class="fw-bold text-dark">{{ $jumlahAnggota }}</span> Anggota Aktif
+                        <span class="fw-bold card-stick-text text-dark">{{ $jumlahAnggota }}</span> Anggota Aktif
                     </small>
                 </div>
-                <div class="col-lg text-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
-                        class="bi bi-archive" viewBox="0 0 16 16">
-                        <path
-                            d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1V2zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5H2zm13-3H1v2h14V2zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                    </svg>
+                <div class="col-lg col-4 text-center card-stick-info">
+                    <i class="bi bi-archive"></i>
                     <small class="d-block ms-5 text-muted">
-                        <span class="fw-bold text-dark">{{ $jumlahRepository }}</span> Repository
+                        <span class="fw-bold card-stick-text text-dark">{{ $jumlahRepository }}</span> Repository
                     </small>
                 </div>
             </div>
@@ -65,7 +51,7 @@
                         alt="Gambar">
                     <div class="card-img-overlay card-activity">
                         <div class="card-body ">
-                            <h6 class="card-title">{{ $posts[0]->title }}</h6>
+                            <h5 class="card-title text-uppercase">{{ $posts[0]->title }}</h5>
                             <p class="card-text"><i class="bi bi-calendar"></i> <small>{{
                                     $posts[0]->created_at->diffForHumans()
                                     }}</small>
@@ -85,7 +71,7 @@
                             <img src="{{ asset('storage/'.$row->image) }}" class="card-img" height="225" width="150"
                                 alt="Gambar Kegiatan">
                             <div class="card-img-overlay activity">
-                                <h5 class="card-title">{{ $row->title }}</h5>
+                                <h5 class="card-title text-uppercase">{{ $row->title }}</h5>
                                 <p class="card-text"><i class="bi bi-calendar"></i> <small>{{
                                         $row->created_at->diffForHumans()
                                         }}</small>
@@ -113,20 +99,20 @@
     </h3>
     <div class="row">
         <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 mt-4">
+            <div class="row mt-4">
                 @foreach ($struktur as $row)
-                <div class="col mt-4">
+                <div class="col-md-4 col-6 mt-4">
                     <div
                         class="shadow-lg d-flex justify-content-center align-items-center p-3 rounded-4 body-struktur flex-column">
                         <div class="person-img">
-                            <img src="{{ asset('storage/' . $row->image) }}" width="300" height="300"
+                            <img src="{{ asset('storage/' . $row->image) }}" width="200" height="200"
                                 class="rounded-circle" alt="...">
                         </div>
                         <div class="person-name my-3">
-                            <h4 class="text-dark text-uppercase fw-bold">{{ $row->name }}</h4>
+                            <h5 class="text-dark text-uppercase fw-bold">{{ $row->name }}</h5>
                         </div>
                         <div class="info">
-                            <h6 class="text-dark text-uppercase fw-bold">{{ $row->jabatan }}</h6>
+                            <h6 class="text-dark text-uppercase fw-normal">{{ $row->jabatan }}</h6>
                         </div>
                     </div>
                 </div>

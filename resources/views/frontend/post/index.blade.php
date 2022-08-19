@@ -3,7 +3,7 @@
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h1 class="mt-4">{{ $post->title }}</h1>
+    <h3 class="mt-4 text-uppercase col-lg-10">{{ $post->title }}</h3>
 
     <ol class="breadcrumb">
         <li class="breadcrumb-item">
@@ -64,7 +64,8 @@
             <div class="card my-4">
                 <h5 class="card-header background-color text-light text-center">Video Dokumentasi</h5>
                 <div class="card-body">
-                    <iframe width="330" height="250" src="{{ $post->link }}">
+                    <iframe width="330" height="250"
+                        src="https://www.youtube.com/embed/{{ $post->link }}?autoplay=1&mute=1">
                     </iframe>
                 </div>
             </div>

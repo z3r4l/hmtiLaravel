@@ -39,8 +39,9 @@
             </select>
         </div>
         <div class="mb-3">
-            <label for="link" class="form-label">Link Youtube</label>
-            <input type="text" class="form-control @error('link')
+            <label for="link" class="form-label">Link Youtube <small>Masukan Bagian Belakang Link Saja | Contoh :
+                    https://youtu.be/<span class="text-primary">uehf5EplrUs</span></small></label>
+            <input type="text" placeholder="Contoh : uehf5EplrUs" class="form-control @error('link')
                 is-invalid
             @enderror" id="link" name="link" required value="{{ old('link') }}">
             @error('link')

@@ -1,18 +1,21 @@
 @extends('frontend.layouts.main')
 @section('content')
 <div class="container">
-    <div class="row">
+    <div class="row ">
         @foreach ($divisi as $row)
         <img src="{{ asset('storage/' . $row->image) }}" width="1280" height="400" class="img-fluid card-img-top"
             alt="...">
-        <h2 class="my-3"></h2>
-        <article class="fs-5">
+        <h3 class="mt-5 text-uppercase about">Apa Itu Divisi {{ $row->name }} <span>
+                <h1 class="d-inline text-header ">?</h1>
+            </span></h3>
+        <article class="fs-4">
             <p class="text-capitalize">{!! $row->body !!}</p>
         </article>
 
     </div>
 
-    <h3 class="text-center fw-bold my-3"><span class="text-header d-block text-uppercase">STRUKTUR DIVISI {{ $row->name
+    <h3 class="text-center fw-bold py-5 mt-5"><span class="text-header d-block text-uppercase">STRUKTUR DIVISI {{
+            $row->name
             }} </span>HMTI
         UNIVERSITAS IBNU SINA
     </h3>

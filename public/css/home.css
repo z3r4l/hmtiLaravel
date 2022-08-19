@@ -1,32 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,600;0,700;1,400&display=swap");
+
+body {
+    font-family: "popins", sans-serif !important;
+}
+
+body h3 {
+    font-size: 36px;
+    font-weight: 700;
+}
+:root {
+    --blue: #185adb;
+    --white: #ffff;
+}
 .active {
-    color: #185adb !important;
+    color: var(--blue) !important;
 }
 .text-header {
-    color: #185adb;
+    color: var(--blue);
 }
-.body-struktur {
-    height: 370px;
-    background-color: #fff !important;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
-}
-.body-struktur:hover {
-    transform: scale(1.05);
-    transition: 0.4s;
-}
-.body-struktur img {
-}
+
 .button-color {
-    background-color: #185adb !important;
+    background-color: var(--blue) !important;
 }
 .background-color {
-    background-color: #185adb !important;
+    background-color: var(--blue) !important;
 }
+/* START NAVBAR */
+.navbar-font {
+    font-size: 18px;
+    font-weight: 400 !important;
+}
+/* END NAVBAR */
+
+/* START HERO */
+.hero {
+    background: linear-gradient(0deg, #0a1931 0%, rgba(10, 25, 49, 0) 100%),
+        url(/img/hero-image.jpeg);
+    height: 621px;
+    width: 1140px;
+    left: 150px;
+    top: 100px;
+    border-radius: 10px;
+}
+
+.hero-font {
+    font-size: 48px !important;
+    font-weight: 700 !important;
+    line-height: 72px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+/* END HERO */
 
 /* START BUTTON BERANDA */
 a.finbyz-button {
     color: #1aa8e2;
     text-decoration: none;
-    background-color: #185adb;
+    background-color: var(--blue);
     color: #fff;
     -webkit-transition: 0.3s all ease;
     transition: 0.3s ease all;
@@ -41,7 +71,7 @@ a.finbyz-button {
     border: 3px solid #ffff;
     border-radius: 30px;
     position: relative;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
     z-index: 2;
 }
 a.finbyz-button:before {
@@ -63,8 +93,8 @@ a.finbyz-button:hover,
 a.finbyz-button:focus {
     transform: scale(0.95);
     transition: 0.9s;
-    color: #185adb;
-    border: 3px solid #185adb;
+    color: var(--blue);
+    border: 3px solid var(--blue);
     font-size: 13px;
     font-weight: bold !important;
 }
@@ -86,7 +116,7 @@ a.finbyz-button:focus:before {
     background-color: whitesmoke;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 }
 .card-stick-info .bi-card-list {
     font-size: 50px !important;
@@ -98,24 +128,48 @@ a.finbyz-button:focus:before {
     font-size: 50px !important;
 }
 .card-stick-text {
-    margin-left: -50px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 90px;
 }
 /* End Stick */
 
 /* START KEGIATAN BERANDA */
+
 .card-activity {
     margin-top: 200px;
-    background-color: rgba(0, 0, 0, 0.4);
+}
+.card-activitys {
+    margin-top: 80px;
+}
+.card-img-overlay {
+    background: linear-gradient(
+        0deg,
+        #0a1931 0%,
+        rgba(10, 25, 49, 0) 100%
+    ) !important;
 }
 .activity {
-    background-color: rgba(0, 0, 0, 0.4);
-    margin-top: 100px;
+    margin-top: 150px;
+}
+.card-beranda h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.card-beranda p {
+    font-size: 13px;
+    font-weight: 600;
 }
 .card-beranda:hover {
     transform: scale(1.03);
     transition: 0.4s;
 }
-.card-img {
+.activity img {
+    background: linear-gradient(
+        0deg,
+        #0a1931 0%,
+        rgba(10, 25, 49, 0) 100%
+    ) !important;
     max-width: 800px;
 }
 /* End KEGIATAN BERANDA */
@@ -166,10 +220,14 @@ a.finbyz-button:focus:before {
 .card-divisi-body {
     background-color: #fff !important;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    height: 450px;
 }
 .card-divisi-body:hover {
     transform: scale(1.03);
     transition: 0.4s;
+}
+.card-divisi-body p {
+    font-size: 16px;
 }
 .image-divisi:hover {
     transform: scale(1.1);
@@ -180,10 +238,31 @@ a.finbyz-button:focus:before {
     justify-content: center;
 }
 .card-link {
-    color: #185adb !important;
+    color: var(--blue) !important;
 }
 
 /* END DEVISI */
+
+/* START STRUKTUR  */
+.body-struktur {
+    height: 370px;
+    background-color: #fff !important;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+.body-struktur h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+.body-struktur h6 {
+    font-size: 14px;
+}
+.body-struktur:hover {
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.body-struktur img {
+}
+/* END STRUKTUR */
 
 /* START EVENT AKAN DATANG  */
 .wrapper {
@@ -218,10 +297,14 @@ a.finbyz-button:focus:before {
 }
 
 /* END EVENT AKAN DATANG */
-
+/* START ABOUT */
+.about h1 {
+    font-size: 80px;
+}
+/* END ABOUT */
 /* START FOOTER */
 .footer {
-    background-color: #185adb;
+    background-color: var(--blue);
     color: #ffff;
 }
 /* END FOOTER */
@@ -244,6 +327,11 @@ a.finbyz-button:focus:before {
         margin-left: -50px;
     }
     /* END Card Stick */
+    /* Start card kegiatan Beranda  */
+    .card-beranda h5 {
+        font-size: 13px;
+    }
+    /* END card kegiatan Beranda */
     /* Start body struktur  */
     .body-struktur {
         height: 300px;
@@ -258,6 +346,10 @@ a.finbyz-button:focus:before {
     .body-struktur img {
         height: 120px;
         width: 120px;
+    }
+    .about h1 {
+        font-size: 60px;
+        font-weight: 800;
     }
 }
 /* END body struktur */

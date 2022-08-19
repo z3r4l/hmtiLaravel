@@ -1,18 +1,20 @@
-<div class="container my-5 visimisi">
-    <h3 class="text-center fw-bold"><span class="text-header d-block">VISI DAN MISI</span>HMTI UNIVERSITAS IBNU SINA
+<div class="container visimisi">
+    <h3 class="text-center mt-5 pt-5 fw-bold"><span class="text-header d-block">VISI DAN MISI</span>HMTI UNIVERSITAS
+        IBNU
+        SINA
     </h3>
     <div class="d-flex justify-content-center">
-        <img src="/img/img-visimisi.jpeg" alt="Gambar Visi Misi" width="440" height="330" class="">
+        <img src="/img/img-visimisi.jpeg" alt="Gambar Visi Misi" width="440" height="330" class="img-fluid">
     </div>
     <div class="row">
-        <div class="col-lg-6 mt-4">
+        <div class="col-lg-6 mt-5">
             <p>
                 Menjadikan HMTI sebagai organisasi akademik unggulan yang mampu meningkatkan kemampuan mahasiswa yang
                 kreatif,
                 inovatif dan berkarakter berbasis IMTAQ.
             </p>
         </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6 mt-5">
             <table id="visimisi">
                 <tr>
                     <td class="d-inline px-4">1.</td>

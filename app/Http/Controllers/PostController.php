@@ -17,7 +17,7 @@ class PostController extends Controller
             'postsLimit' => Post::with(['author', 'category'])->latest()->offset(1)->limit(4)->get(),
             'jumlahRepository' => Post::all()->count(),
             'jumlahAnggota' => Struktur::all()->count(),
-            'struktur' => Struktur::where('divisi_id', '1')->limit(3)->get(),
+            'struktur' => Struktur::where('divisi_id', '1')->limit(4)->get(),
         ]);
     }
     public function show(Post $post)

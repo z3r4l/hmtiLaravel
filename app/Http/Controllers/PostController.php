@@ -16,7 +16,7 @@ class PostController extends Controller
             'posts' => Post::with(['author', 'category'])->latest()->paginate(),
             'postsLimit' => Post::with(['author', 'category'])->latest()->offset(1)->limit(4)->get(),
             'jumlahRepository' => Post::all()->count(),
-            'jumlahAnggota' => Struktur::all()->count(),
+            'jumlahAnggota' => Struktur::all()->count() - 4,
             'struktur' => Struktur::where('divisi_id', '1')->limit(4)->get(),
         ]);
     }

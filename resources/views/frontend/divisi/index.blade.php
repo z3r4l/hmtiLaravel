@@ -14,7 +14,7 @@
 
     </div>
 
-    <h3 class="text-center fw-bold py-5 mt-5"><span class="text-header d-block text-uppercase">STRUKTUR DIVISI {{
+    <h3 class="text-center text-judul"><span class="text-header d-block text-uppercase">STRUKTUR DIVISI {{
             $row->name
             }} </span>HMTI
         UNIVERSITAS IBNU SINA
@@ -24,18 +24,14 @@
         <div class="container">
             <div class="row d-flex justify-content-center">
                 @foreach ($struktur as $row)
-                <div class="col-md-3 col-6 mt-4">
-                    <div
-                        class=" d-flex justify-content-center align-items-center p-3 rounded-4 body-struktur flex-column">
-                        <div class="person-img">
-                            <img src="{{ asset('storage/' . $row->image) }}" width="200" height="200"
-                                class="rounded-circle" alt="...">
-                        </div>
-                        <div class="person-name my-3">
-                            <h5 class="text-dark text-uppercase text-center fw-bold">{{ $row->name }}</h5>
-                        </div>
-                        <div class="info">
-                            <h6 class="text-dark text-uppercase text-center fw-normal">{{ $row->jabatan }}</h6>
+                <div class="col-md-3 col-6 mt-4 ">
+                    <div class="card border-0 text-bg-dark body-struktur ">
+                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img" alt="...">
+                        <div class="card-struktur">
+                            <div class=" person-info background-color">
+                                <h5 class="text-white text-uppercase text-center">{{ $row->name }}</h5>
+                                <p class="card-text text-white text-uppercase text-center">{{ $row->jabatan }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

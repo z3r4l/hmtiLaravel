@@ -1,6 +1,7 @@
 @extends('frontend.layouts.main')
 @section('content')
 {{-- START HERO --}}
+
 <div class="container">
     <div class="p-4 p-md-5 mb-4 rounded img-fluid hero">
         <div class="text-center mt-5">
@@ -32,7 +33,7 @@
                 </div>
                 <div class="col-lg text-center card-stick-info">
                     <img src="/img/icon/repository-icon.svg" alt="icon">
-                    <small class="d-block card-stick-text me-5 mt-2 text-muted">
+                    <small class="d-block card-stick-text-repo me-5 mt-2 text-muted">
                         <span class="fw-semibold text-dark">{{ $jumlahRepository }}</span> Repository
                     </small>
                 </div>
@@ -42,21 +43,20 @@
 </div>
 {{-- END Sticky --}}
 {{-- START KEGIATAN --}}
-<div class="container activity">
-    <h3><span class=" border-bottom mt-5 border-2 fw-bold">KEGIATAN KAMI</span></h3>
+<section class="container activity">
+    <h3><span class="text-judul fw-bold">KEGIATAN KAMI</span></h3>
     <div class="row mb-3">
         <div class="col-md-4 themed-grid-col ">
             <a href="/posts/{{$posts[0]->slug }}">
-                <div class="card border-0 text-bg-dark mt-3 card-beranda">
+                <div class="card border-0 text-bg-dark mt-3 card-beranda-big position-relative">
                     <img src="{{ asset('storage/'.$posts[0]->image) }}" class="card-img" height="465" alt="Gambar">
-                    <div class="card-img-overlay ">
+                    <div class="card-img-overlay card-overlay-big">
                         <div class="card-body card-activity">
                             <h5 class="card-title text-uppercase">{{ $posts[0]->title }}</h5>
-                            <p class="card-text"><i class="bi bi-calendar"></i> <small>{{
-                                    $posts[0]->created_at->diffForHumans()
-                                    }}</small>
+                            <p class="card-text"><img src="/img/icon/calendar.svg" class="me-1 calendar" alt="icon">{{
+                                $posts[0]->created_at->diffForHumans()}}
                             </p>
-                            <small class="card-text">{{ Str::limit($posts[0]->excerpt,180)}}</small>
+                            <small class="card-text">{{ Str::limit($posts[0]->excerpt,150)}}</small>
                         </div>
                     </div>
                 </div>
@@ -67,15 +67,16 @@
                 @foreach ($postsLimit as $row)
                 <a href="/posts/{{ $row->slug }}">
                     <div class="col mt-3">
-                        <div class="card border-0 text-bg-dark card-beranda">
+                        <div class="card border-0 text-bg-dark card-beranda position-relative">
                             <img src="{{ asset('storage/'.$row->image) }}" class="card-img" height="225" width="150"
                                 alt="Gambar Kegiatan">
-                            <div class="card-img-overlay card-activitys">
-                                <div class="card-body ">
+                            <div class="card-img-overlay card-overlay">
+                                <div class="card-body card-activitys">
                                     <h5 class="card-title text-uppercase">{{ $row->title }}</h5>
-                                    <p class="card-text"><i class="bi bi-calendar"></i> <small>{{
-                                            $row->created_at->diffForHumans()
-                                            }}</small>
+                                    <p class="card-text"><img src="/img/icon/calendar.svg" class="me-1 calendar"
+                                            alt="icon">{{
+                                        $row->created_at->diffForHumans()
+                                        }}
                                     </p>
                                 </div>
                             </div>
@@ -85,37 +86,36 @@
                 @endforeach
             </div>
         </div>
-
     </div>
-</div>
+</section>
 
 {{-- END KEGIATAN --}}
 
 {{-- START DIVISI --}}
-@include('frontend.partials.cardDivisi.index')
+<section class="container">
+    <h3 class="text-center text-judul fw-bold"><span class="text-header d-block">DIVISI</span>HMTI UNIVERSITAS
+        IBNU SINA
+    </h3>
+    @include('frontend.partials.cardDivisi.index')
+</section>
 {{-- END DIVISI --}}
 {{-- START STRUKTUR ORGANISASI --}}
-
-<div class="container">
-    <h3 class="text-center fw-bold pt-5 mt-5"><span class="text-header d-block">STRUKTUR</span>HMTI UNIVERSITAS IBNU
+<section class="container struktur">
+    <h3 class="text-center fw-bold text-judul"><span class="text-header d-block">STRUKTUR</span>HMTI UNIVERSITAS IBNU
         SINA
     </h3>
     <div class="row">
         <div class="container">
             <div class="row">
                 @foreach ($struktur as $row)
-                <div class="col-md-3 col-6 mt-4">
-                    <div
-                        class="shadow-lg d-flex justify-content-center align-items-center p-3 rounded-4 body-struktur flex-column">
-                        <div class="person-img">
-                            <img src="{{ asset('storage/' . $row->image) }}" width="200" height="200"
-                                class="rounded-circle" alt="...">
-                        </div>
-                        <div class="person-name my-3">
-                            <h5 class="text-dark text-uppercase text-center fw-bold">{{ $row->name }}</h5>
-                        </div>
-                        <div class="info">
-                            <h6 class="text-dark text-uppercase text-center fw-normal">{{ $row->jabatan }}</h6>
+                <div class="col-md-3 col-6 mt-4 ">
+                    <div class="card border-0 text-bg-dark body-struktur ">
+                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img" alt="...">
+                        <div class="card-struktur">
+                            <div class=" person-info background-color">
+                                <h5 class="text-white text-uppercase text-center">{{ $row->name }}</h5>
+                                <p class="card-text text-white text-uppercase text-center">{{ $row->jabatan }}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -129,11 +129,10 @@
         <a href="/struktur" class="finbyz-button btn-form-submit fw-bold">
             LIHAT SELENGKAPNYA</a>
     </div>
+</section>
+
+{{-- END STRUKTUR ORGANISASI --}}
 
 
 
-    {{-- END STRUKTUR ORGANISASI --}}
-
-
-
-    @endsection
+@endsection

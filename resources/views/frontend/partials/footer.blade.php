@@ -13,11 +13,11 @@
                     <i class="bi bi-envelope"></i> hmti@uis.ac.id
                 </a>
                 <a href="#" class="text-decoration-none text-white d-block">
-                    <i class="bi bi-telephone"></i> 082284914253
+                    <i class="bi bi-telephone"></i> 081267663342
                 </a>
             </div>
 
-            <div class="col-12 col-md-2 mt-5">
+            <div class="col-12 col-md-2 info-footer">
                 <h6 class="fw-semibold mb-4">TENTANG KAMI</h6>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
@@ -43,7 +43,7 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-2 mt-5">
+            <div class="col-12 col-md-2 info-footer">
                 <h6 class="fw-semibold  mb-4">KONTEN</h6>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
@@ -59,7 +59,7 @@
                 </ul>
             </div>
 
-            <div class="col-12 col-md-2 mt-5">
+            <div class="col-12 col-md-2 info-footer">
                 <h6 class="fw-semibold mb-4">LAINNYA</h6>
                 <ul class="nav flex-column">
                     <li class="nav-item mb-2">
@@ -71,7 +71,7 @@
             </div>
         </div>
     </div>
-    <div class="mt-5 pb-3">
+    <div class="copyright-footer">
         <p class="text-center">&copy; 2022 HMTI UIS • All rights reserved •</p>
     </div>
 </div>

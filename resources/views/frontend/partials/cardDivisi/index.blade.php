@@ -3,9 +3,9 @@
         <div class="col-12  item col-sm-6 col-md-6 col-lg-3 mt-2 ">
             <div class="card  border-0">
                 <div class="card-divisi-body rounded-4 card-body" style="padding-bottom: 24px">
-                    <div class="card-icon"><img class="image-divisi" src="/img/icon/litbang-icon-card.png"
+                    <div class="card-icon"><img class="image-divisi" src="/img/icon/litbang-icon-card.svg"
                             alt="icon divisi"></div>
-                    <h5 class="card-title fw-bold mt-3">PENELITIAN DAN PENGEMBANGAN</h5>
+                    <h5 class="card-title fw-bold mt-3 text-center">PENELITIAN DAN PENGEMBANGAN</h5>
                     <p class="card-text">Devisi Litbang adalah Devisi Penelitian dan Pengembangan. Dimana Tugas dan
                         perananya adalah fokus pada pengembangan Softskill dan Hardskill di bidang teknik informatika
                         baik dalam Internal mahasiswa Prodi Teknik Informatika. </p>
@@ -21,7 +21,7 @@
         <div class="col-12 ms-3 item col-sm-6 col-md-6 col-lg-3 mt-2">
             <div class="card border-0">
                 <div class="card-divisi-body rounded-4 card-body" style="padding-bottom: 24px">
-                    <div class="card-icon"><img class="image-divisi" src="/img/icon/program-icon-card.png"
+                    <div class="card-icon"><img class="image-divisi" src="/img/icon/program-icon-card.svg"
                             alt="icon divisi"></div>
                     <h5 class="card-title fw-bold mt-3 text-center">PROGRAM</h5>
                     <p class="card-text py-4">divisi program adalah divisi yang menyokong perkembangan infrastruktur
@@ -41,7 +41,7 @@
         <div class="col-12 ms-3 item col-sm-6 col-md-6 col-lg-3 mt-2">
             <div class="card border-0">
                 <div class="card-divisi-body rounded-4 card-body">
-                    <div class="card-icon"><img class="image-divisi" src="/img/icon/media-icon-card.png"
+                    <div class="card-icon"><img class="image-divisi" src="/img/icon/media-icon-card.svg"
                             alt="icon divisi">
                     </div>
                     <h5 class="card-title fw-bold text-center mt-3">MEDIA</h5>
@@ -61,7 +61,7 @@
         <div class="col-12 ms-3 item col-sm-6 col-md-6 col-lg-3 mt-2">
             <div class="card border-0">
                 <div class="card-divisi-body rounded-4 card-body">
-                    <div class="card-icon"><img class="image-divisi" src="/img/icon/humas-icon-card.png"
+                    <div class="card-icon"><img class="image-divisi" src="/img/icon/humas-icon-card.svg"
                             alt="icon divisi">
                     </div>
                     <h5 class="card-title fw-bold text-center mt-3">HUMAS</h5>

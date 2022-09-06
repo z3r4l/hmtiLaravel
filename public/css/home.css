@@ -56,7 +56,7 @@ html * {
     background-color: var(--blue);
     border-radius: 100%;
     position: fixed;
-    bottom: 40px;
+    bottom: 130px;
     right: 25px;
     cursor: pointer;
     color: #fff;
@@ -77,7 +77,7 @@ html * {
 }
 
 #up-to-top:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 17, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
     background-color: var(--blue);
 }
 #up-to-top span {
@@ -91,10 +91,13 @@ html * {
 /* End auto top button */
 
 /* START NAVBAR */
-
+.navbar-logo {
+    width: 56px !important;
+    height: 56px !important;
+}
 .navbar-font {
-    font-size: 18px;
-    font-weight: 400 !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
 }
 /* END NAVBAR */
 
@@ -107,7 +110,10 @@ html * {
     top: 100px;
     border-radius: 10px;
 }
-
+.hero-logo {
+    width: 114px;
+    height: 114px;
+}
 .hero-font {
     font-size: 48px !important;
     font-weight: 700 !important;
@@ -183,23 +189,18 @@ a.finbyz-button:focus:before {
     padding: 20px;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.15);
 }
-.card-stick-info .bi-card-list {
-    font-size: 50px !important;
-}
-.card-stick-info .bi-people {
-    font-size: 50px !important;
-}
-.card-stick-info .bi-archive {
-    font-size: 50px !important;
+.card-stick-info img {
+    width: 50px !important;
+    height: 50px !important;
 }
 .card-stick-text {
     font-size: 18px;
     font-weight: 500;
-    margin-left: 90px;
+    margin-left: 80px;
 }
 .card-stick-text-repo {
     font-size: 18px;
-    margin-left: 100px;
+    margin-left: 50px;
 }
 /* End Stick */
 
@@ -208,10 +209,12 @@ a.finbyz-button:focus:before {
 .card-activity {
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 .card-activitys {
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 .card-img-overlay {
     background: linear-gradient(
@@ -223,7 +226,9 @@ a.finbyz-button:focus:before {
 .activity {
     margin-top: 150px;
 }
-
+.card-beranda-big .card-img {
+    height: 410px;
+}
 .card-beranda-big h5 {
     font-size: 24px;
     font-weight: 700;
@@ -241,6 +246,10 @@ a.finbyz-button:focus:before {
     font-size: 11px;
     font-weight: 400;
     color: #b3b3b3;
+}
+
+.card-beranda .card-img {
+    height: 197px;
 }
 .card-beranda h5 {
     font-size: 18px;
@@ -271,10 +280,15 @@ a.finbyz-button:focus:before {
 /* START KEGIATAN */
 
 .card-kegiatan .card-title {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
-
+.card-kegiatan .time {
+    font-size: 12px;
+}
+.time i {
+    color: var(--blue) !important;
+}
 .card-image-kegiatan {
     position: relative;
 }
@@ -293,16 +307,18 @@ a.finbyz-button:focus:before {
     transition: 0.5s ease;
 }
 
-.card-footer__info {
-    font-size: 12px;
-    font-weight: 300;
+.card-footer-info {
     position: relative;
 }
-
+.card-footer-info span {
+    font-size: 12px;
+    margin-top: -10px;
+    font-weight: 600;
+}
 .read-more {
     position: absolute;
     right: 0;
-    font-weight: 600;
+    top: 0 !important;
 }
 
 .read-more-1 {
@@ -336,7 +352,7 @@ a.finbyz-button:focus:before {
 
 /* End KEGIATAN TERBARU */
 /* Start Visimisi */
-.visimisi {
+.misi {
     margin-top: 50px !important;
 }
 /* End VisiMisi */
@@ -347,7 +363,7 @@ a.finbyz-button:focus:before {
 }
 .card-divisi-body {
     background-color: #fff !important;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
     height: 400px;
     position: relative;
 }
@@ -376,20 +392,19 @@ a.finbyz-button:focus:before {
 /* END DEVISI */
 
 /* START STRUKTUR  */
+
 .card-struktur {
     position: relative;
 }
 .body-struktur {
     background-color: #fff !important;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 .body-struktur:hover {
     transform: scale(1.05);
     transition: 0.4s;
 }
-.person-img {
-    height: 350px;
-}
+
 .person-info {
     position: absolute;
     bottom: 0;
@@ -407,23 +422,63 @@ a.finbyz-button:focus:before {
 /* END STRUKTUR */
 
 /* START ABOUT */
-.about {
+.about-divisi {
     margin-bottom: -20px;
-    font-size: 36px;
+    font-size: 28px;
+    font-weight: 600;
+}
+.about-divisi h1 {
+    font-size: 50px;
     font-weight: 700;
 }
-.about h1 {
-    font-size: 80px;
-    font-weight: 700;
+.divisi-content {
+    font-size: 14px;
 }
 /* END ABOUT */
+/* Start Postingan Kegiatan*/
+.post {
+    margin-top: -25px !important;
+}
+.post-title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+}
+.category-post li {
+    font-size: 13px;
+}
+.date-post {
+    font-size: 14px;
+}
+.content-post {
+    font-size: 16px !important;
+}
+/* End Postingan Kegiatan*/
 /* START FOOTER */
 .footer {
     background-color: var(--blue);
     color: #ffff;
 }
+.footer h5 {
+    font-size: 18px;
+    font-weight: 700;
+}
+.footer p {
+    font-size: 14px;
+    font-weight: 400;
+}
+.footer .contact-me {
+    font-size: 14px;
+    font-weight: 400;
+}
 .info-footer {
     margin-top: 50px !important;
+    font-size: 14px;
+    font-weight: 600;
+}
+.link-footer {
+    font-size: 14px !important;
+    font-weight: 400;
 }
 .copyright-footer {
     margin-top: 120px;
@@ -438,6 +493,16 @@ a.finbyz-button:focus:before {
         margin-bottom: 40px !important;
         font-size: 36px;
         font-weight: 700;
+    }
+    /* Card Stick */
+    .card-stick-text {
+        font-size: 16px;
+        font-weight: 500;
+        margin-left: 65px;
+    }
+    .card-stick-text-repo {
+        font-size: 18px;
+        margin-left: 50px;
     }
     /* card kegiatan beranda */
     .activity img {
@@ -500,9 +565,6 @@ a.finbyz-button:focus:before {
     .card-struktur {
         position: relative;
     }
-    .person-img {
-        height: 350px;
-    }
     .person-info {
         position: absolute;
         bottom: 0;
@@ -520,48 +582,46 @@ a.finbyz-button:focus:before {
 
 @media only screen and (max-width: 992px) {
     /* Start Card Stick  */
-    .card-stick-info .bi-card-list {
-        font-size: 40px !important;
-        font-weight: bold;
-    }
-    .card-stick-info .bi-people {
-        font-size: 40px !important;
-        font-weight: bold;
-    }
-    .card-stick-info .bi-archive {
-        font-size: 40px !important;
-        font-weight: bold;
+    .card-stick-info img {
+        width: 40px !important;
+        height: 40px !important;
     }
     .card-stick-text {
-        font-size: 18px;
-        margin-left: -50px;
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+        margin-left: 80px;
+    }
+    .card-stick-text-repo {
+        font-size: 16px;
+        text-align: center;
+        font-weight: 500;
+        margin-left: 65px;
     }
 
     /* END Card Stick */
-    /* START KEGIATAN BERANDA */
 
-    .card-activity {
-        position: absolute;
-        bottom: 0;
+    /* Start Hero */
+    .hero-font {
+        font-size: 24px !important;
+        font-weight: 700 !important;
     }
-    .card-activitys {
-        position: absolute;
-        bottom: 0;
+    .hero-logo {
+        width: 100px;
+        height: 100px;
     }
-    .card-img-overlay {
-        background: linear-gradient(
-            0deg,
-            #0a1931 0%,
-            rgba(10, 25, 49, 0) 100%
-        ) !important;
-    }
+    /* End Hero */
+    /* START KEGIATAN BERANDA */
     .activity {
         margin-top: 150px;
     }
+    .card-beranda-big .card-img {
+        height: 375px;
+    }
 
     .card-beranda-big h5 {
-        font-size: 24px;
-        font-weight: 700;
+        font-size: 16px;
+        font-weight: 600;
     }
     .card-beranda-big p {
         font-size: 12px;
@@ -577,12 +637,15 @@ a.finbyz-button:focus:before {
         font-weight: 400;
         color: #b3b3b3;
     }
+    .card-beranda .card-img {
+        height: 180px;
+    }
     .card-beranda h5 {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
     }
     .card-beranda p {
-        font-size: 10px;
+        font-size: 12px;
         font-weight: 600;
     }
     .card-beranda:hover {
@@ -607,9 +670,6 @@ a.finbyz-button:focus:before {
     .card-struktur {
         position: relative;
     }
-    .person-img {
-        height: 300px;
-    }
     .person-info {
         position: absolute;
         bottom: 0;
@@ -623,11 +683,7 @@ a.finbyz-button:focus:before {
         font-size: 8px;
         font-weight: 400;
     }
-    /* About */
-    .about h1 {
-        font-size: 60px;
-        font-weight: 800;
-    }
+
     /* Footer */
     .info-footer {
         margin-top: 30px !important;
@@ -681,12 +737,23 @@ a.finbyz-button:focus:before {
         color: var(--blue) !important;
     }
     /* Start Visi Misi */
-    .visimisi {
+    .misi {
         margin-top: -5px !important;
     }
     /* End Visi Misi */
 }
 @media only screen and (max-width: 550px) {
+    /* START NAVBAR */
+
+    .navbar-logo {
+        width: 40px !important;
+        height: 40px !important;
+    }
+    .navbar-font {
+        font-size: 14px !important;
+        font-weight: 700 !important;
+    }
+    /* END NAVBAR */
     /* Text Judul */
     .text-judul {
         margin-top: 50px !important;
@@ -699,16 +766,30 @@ a.finbyz-button:focus:before {
         margin-bottom: -80px;
     }
     .card-stick-info img {
-        height: 30px;
-        width: 30px;
+        height: 30px !important;
+        width: 30px !important;
     }
     .card-stick-text {
         font-size: 12px;
-        margin: auto !important;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 60px;
     }
     .card-stick-text-repo {
         font-size: 12px;
-        margin-left: 40px;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 50px;
+    }
+
+    /* Hero */
+    .hero-font {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+    }
+    .hero-logo {
+        width: 90px;
+        height: 90px;
     }
     /* START KEGIATAN BERANDA */
 
@@ -758,11 +839,11 @@ a.finbyz-button:focus:before {
         color: #b3b3b3;
     }
     .card-beranda h5 {
-        font-size: 12px;
+        font-size: 14px;
         font-weight: 400;
     }
     .card-beranda p {
-        font-size: 8px;
+        font-size: 12px;
         font-weight: 400;
     }
     .card-beranda:hover {
@@ -783,11 +864,6 @@ a.finbyz-button:focus:before {
     }
     /* End KEGIATAN BERANDA */
     /* START CARD DEVISI */
-    .card-divisi-body {
-        background-color: #fff !important;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        height: 480px;
-    }
 
     .wrapper {
         max-height: 1200px;
@@ -797,38 +873,143 @@ a.finbyz-button:focus:before {
     }
     .wrapper .item {
         min-width: 450px;
-        height: 450px;
+        height: 340px;
         margin-left: 20px;
-        margin-right: -120px;
+        margin-right: -220px;
         margin-bottom: 5px;
     }
     .card-divisi-body {
         background-color: #fff !important;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-        width: 300px;
-        height: 400px;
+        width: 240px;
+        height: 320px;
         position: relative;
     }
     .card-divisi-body:hover {
         transform: scale(1.03);
         transition: 0.4s;
     }
-    .card-divisi-body p {
+    .card-divisi-body h5 {
         font-size: 14px;
+    }
+    .card-divisi-body p {
+        text-align: justify;
+        font-size: 12px;
     }
     .image-divisi:hover {
         transform: scale(1.1);
         transition: 0.4s;
     }
     .card-icon {
-        display: flex;
-        justify-content: center;
+        margin: auto;
+        height: 50px;
+        width: 50px;
     }
     .card-link {
         position: absolute;
         bottom: 0;
+        font-size: 12px;
         padding-bottom: 20px;
         color: var(--blue) !important;
+    }
+    /* START KEGIATAN */
+    .kegiatan img {
+        width: 250px;
+    }
+
+    .card-kegiatan .card-title {
+        font-size: 14px;
+        font-weight: 700;
+    }
+    .card-kegiatan .card-body {
+        font-size: 14px;
+        font-weight: normal;
+    }
+    .card-kegiatan .card-category {
+        font-size: 12px;
+        font-weight: normal;
+    }
+    .time i {
+        color: var(--blue) !important;
+    }
+    .card-image-kegiatan {
+        position: relative;
+    }
+    .card-image-kegiatan img {
+        height: 120px;
+    }
+    .image-overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+    }
+
+    .card-footer-info {
+        position: relative;
+    }
+    .card-footer-info span {
+        font-size: 10px;
+        margin-top: -10px;
+        font-weight: 200;
+    }
+    .read-more {
+        position: absolute;
+        left: 0;
+        top: 0 !important;
+    }
+
+    .read-more-1 {
+        text-decoration: none;
+        position: relative;
+        color: var(--white);
+    }
+
+    .read-more-1::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--white);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease-in;
+    }
+
+    .read-more-1:hover {
+        color: var(--white);
+    }
+
+    .read-more-1:hover::after {
+        transform: scaleX(1);
+        transform-origin: right;
+        color: var(--white);
+    }
+
+    /* End KEGIATAN TERBARU */
+    /* Start Visi Misi  */
+    .visimisi img {
+        width: 250px !important;
+    }
+    .visi {
+        font-size: 14px !important;
+    }
+    .misi {
+        font-size: 14px;
+        margin-top: -5px !important;
+    }
+    /* End Visi Misi */
+    /* Start body struktur  */
+
+    .struktur img {
+        width: 250px;
     }
     /* Sejarah HMTI */
     .sejarah-hmti {
@@ -836,17 +1017,49 @@ a.finbyz-button:focus:before {
         margin-top: -20px !important;
     }
     /* Start About */
-    .about {
+    .about-divisi {
         margin-bottom: -10px;
-        font-size: 24px;
+        font-size: 22px !important;
         font-weight: 600;
     }
-    .about h1 {
+    .about-divisi h1 {
         font-size: 36px;
         font-weight: 800;
     }
 }
 @media only screen and (max-width: 350px) {
+    /* START NAVBAR */
+    .navbar-logo {
+        width: 30px !important;
+        height: 30px !important;
+    }
+    .navbar-font {
+        font-size: 10px !important;
+        font-weight: 700 !important;
+    }
+    /* END NAVBAR */
+    /* Start Card Stick */
+    .card-stick-info img {
+        height: 20px !important;
+        width: 20px !important;
+    }
+    .card-stick-text {
+        font-size: 10px;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 0px;
+    }
+    .card-stick-text-repo {
+        font-size: 10px;
+        font-weight: 500;
+        text-align: center;
+        margin-left: 0px;
+    }
+    /* Hero */
+    .hero-font {
+        font-size: 18px !important;
+        font-weight: 600 !important;
+    }
     /* START DEVISI */
     .wrapper {
         max-height: 500px;
@@ -857,28 +1070,28 @@ a.finbyz-button:focus:before {
     .wrapper .item {
         min-width: 100px;
         height: 370px;
-        margin-right: -10px;
-        margin-left: -60px;
+        margin-right: -40px;
+        margin-left: 20px;
         margin-bottom: 5px;
     }
     .card-divisi-body {
         background-color: #fff !important;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
         height: 320px;
-        max-width: 250px;
+        width: 210px;
     }
     .card-divisi-body:hover {
         transform: scale(1.03);
         transition: 0.4s;
     }
     .card-divisi-body p {
-        font-size: 12px;
+        font-size: 10px;
     }
     .card-divisi-body h5 {
-        font-size: 14px;
+        font-size: 12px;
     }
     .card-divisi-body a {
-        font-size: 12px;
+        font-size: 10px;
     }
     .image-divisi:hover {
         transform: scale(1.1);
@@ -896,4 +1109,10 @@ a.finbyz-button:focus:before {
     }
 
     /* END DEVISI */
+    /* Start Kegiatan */
+    .card-footer-info span {
+        font-size: 9px;
+        margin-top: -9px;
+        font-weight: 200;
+    }
 }

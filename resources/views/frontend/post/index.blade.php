@@ -3,9 +3,9 @@
 <div class="container">
 
     <!-- Page Heading/Breadcrumbs -->
-    <h3 class="mt-4 text-uppercase col-lg-10">{{ $post->title }}</h3>
+    <h2 class="mt-4 text-uppercase col-lg-10 post-title">{{ $post->title }}</h2>
 
-    <ol class="breadcrumb">
+    <ol class="breadcrumb category-post">
         <li class="breadcrumb-item">
             <a href="{{ url('/') }}">Beranda</a>
         </li>
@@ -15,22 +15,22 @@
     <div class="row">
 
         <!-- Post Content Column -->
-        <div class="col-lg-8 border-top">
-
-            <!-- Preview Image -->
-            <img class="mt-2 rounded img-fluid" src="{{ asset('storage/'.$post->image) }}" width="750" height="400"
-                alt="">
-
+        <div class="col-lg-8 post">
             <hr>
 
             <!-- Date/Time -->
-            <p>Postingan Hari {{ $post->created_at->isoFormat('dddd, D MMMM Y | hh:mm:ss')}}</p>
+            <p class="date-post">Postingan Hari {{ $post->created_at->isoFormat('dddd, D MMMM Y | hh:mm:ss')}}</p>
 
             <hr>
 
+            <!-- Preview Image -->
+            <img class="mt-2 rounded img-fluid" src="{{ asset('storage/'.$post->image) }}" alt="">
+
+
+
             <!-- Post Content -->
-            <article class="my-3 fs-5">
-                <p>{!! $post->body !!}</p>
+            <article class="my-3">
+                <p class="content-post">{!! $post->body !!}</p>
             </article>
             <hr>
         </div>

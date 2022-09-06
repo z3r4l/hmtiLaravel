@@ -1,7 +1,7 @@
 @extends('frontend.layouts.main')
 @section('content')
 <section class="container">
-    <div class="d-flex justify-content-center my-4">
+    <div class="d-flex justify-content-center my-4 kegiatan">
         <img src="/img/repository.jpeg" class="img-fluid" alt="Gambar Visi Misi" width="440" height="330" class="">
     </div>
     <h3 class="text-center fw-bold text-judul"><span class="text-header d-block">KEGIATAN</span>HMTI UNIVERSITAS IBNU

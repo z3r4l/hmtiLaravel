@@ -5,11 +5,11 @@
         @foreach ($divisi as $row)
         <img src="{{ asset('storage/' . $row->image) }}" width="1280" height="400" class="img-fluid card-img-top"
             alt="...">
-        <h3 class="mt-5 text-uppercase about">Apa Itu Divisi {{ $row->name }} <span>
+        <h3 class="text-uppercase about-divisi">Apa Itu Divisi {{ $row->name }} <span>
                 <h1 class="d-inline text-header ">?</h1>
             </span></h3>
-        <article class="fs-4">
-            <p class="text-capitalize">{!! $row->body !!}</p>
+        <article class="divisi-content">
+            <p>{!! $row->body !!}</p>
         </article>
 
     </div>

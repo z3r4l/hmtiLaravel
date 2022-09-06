@@ -5,11 +5,11 @@
 <div class="container">
     <div class="p-4 p-md-5 mb-4 rounded img-fluid hero">
         <div class="text-center mt-5">
-            <img src="/img/hmti.jpeg" class="ms-auto" width="114" height="114" alt="">
+            <img src="/img/logoHMTI.svg" class="ms-auto hero-logo" alt="">
         </div>
-        <h1 class="mt-3 text-center text-light hero-font fw-bold pb-4">HIMPUNAN MAHASISWA<br>TEKNIK
+        <h1 class="mt-3 text-center text-light hero-font pb-4">HIMPUNAN MAHASISWA<br>TEKNIK
             INFORMATIKA <br>
-            UNIVERSITAS IBNU SINA BATAM</h1>
+            UNIVERSITAS IBNU SINA</h1>
     </div>
 </div>
 {{-- END Hero --}}
@@ -17,7 +17,7 @@
 {{-- START STICKY --}}
 <div class="container stick">
     <div class="row d-flex justify-content-center">
-        <div class="col-lg-10 col-6 card-stick">
+        <div class="col-lg-8 col-6 card-stick">
             <div class="row">
                 <div class="col-lg card-stick-info text-center">
                     <img src="/img/icon/kegiatan-icon.svg" alt="icon">
@@ -33,7 +33,7 @@
                 </div>
                 <div class="col-lg text-center card-stick-info">
                     <img src="/img/icon/repository-icon.svg" alt="icon">
-                    <small class="d-block card-stick-text-repo me-5 mt-2 text-muted">
+                    <small class="d-block card-stick-text-repo mt-2 text-muted">
                         <span class="fw-semibold text-dark">{{ $jumlahRepository }}</span> Repository
                     </small>
                 </div>
@@ -49,8 +49,8 @@
         <div class="col-md-4 themed-grid-col ">
             <a href="/posts/{{$posts[0]->slug }}">
                 <div class="card border-0 text-bg-dark mt-3 card-beranda-big position-relative">
-                    <img src="{{ asset('storage/'.$posts[0]->image) }}" class="card-img" height="465" alt="Gambar">
-                    <div class="card-img-overlay card-overlay-big">
+                    <img src="{{ asset('storage/'.$posts[0]->image) }}" class="card-img img-fluid" alt="Gambar">
+                    <div class="card-img-overlay">
                         <div class="card-body card-activity">
                             <h5 class="card-title text-uppercase">{{ $posts[0]->title }}</h5>
                             <p class="card-text"><img src="/img/icon/calendar.svg" class="me-1 calendar" alt="icon">{{
@@ -68,9 +68,8 @@
                 <a href="/posts/{{ $row->slug }}">
                     <div class="col mt-3">
                         <div class="card border-0 text-bg-dark card-beranda position-relative">
-                            <img src="{{ asset('storage/'.$row->image) }}" class="card-img" height="225" width="150"
-                                alt="Gambar Kegiatan">
-                            <div class="card-img-overlay card-overlay">
+                            <img src="{{ asset('storage/'.$row->image) }}" class="card-img" alt="Gambar Kegiatan">
+                            <div class="card-img-overlay">
                                 <div class="card-body card-activitys">
                                     <h5 class="card-title text-uppercase">{{ $row->title }}</h5>
                                     <p class="card-text"><img src="/img/icon/calendar.svg" class="me-1 calendar"
@@ -110,7 +109,7 @@
                 @foreach ($struktur as $row)
                 <div class="col-md-3 col-6 mt-4 ">
                     <div class="card border-0 text-bg-dark body-struktur ">
-                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img" alt="...">
+                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img img-fluid" alt="...">
                         <div class="card-struktur">
                             <div class=" person-info background-color">
                                 <h5 class="text-white text-uppercase text-center">{{ $row->name }}</h5>

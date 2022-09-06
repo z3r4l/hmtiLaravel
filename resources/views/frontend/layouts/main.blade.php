@@ -8,9 +8,9 @@
   <meta name="description" content="Website HMTI UIS">
   <meta name="keywords" content="HMTI UIS Adalah">
   <link rel=" stylesheet" href="/css/home.css">
-  <link rel="icon" type="image" href="img/hmti.jpeg">
+  <link rel="icon" type="image" href="img/logoHMTI.svg">
 
-  <title>DEVELOPMENT</title>
+  <title>WEBSITE HMTI UIS</title>
 
   {{-- Start CDN Icon Bootstrap --}}
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
@@ -30,7 +30,7 @@
   {{-- End Navbar --}}
 
   {{-- Start Scroll automatic button --}}
-  @include('frontend.partials.topButton')
+  @include('frontend.partials.top-button')
   {{-- End Scroll automatic button --}}
 
   {{-- Start Isi Content --}}

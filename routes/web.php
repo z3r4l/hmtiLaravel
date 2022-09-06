@@ -51,18 +51,16 @@ Route::get('/login', [LoginController::class, 'index'])->name('login')->middlewa
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
 
-Route::middleware('auth')->group(function(){
+Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return view('backend.dashboard.index', [
             'title' => 'Halaman Dashboard',
             'active' => 'dashboard'
         ]);
     });
-    
+
     Route::resource('/dashboard/posts', DashboardPostController::class);
     Route::resource('/dashboard/strukturs', DashboardStrukturController::class);
     Route::resource('/dashboard/divisi', DashboardDivisiController::class);
     Route::resource('/dashboard/category', DashboardCategoryController::class);
 });
-
-

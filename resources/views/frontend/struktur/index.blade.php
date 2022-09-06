@@ -1,7 +1,7 @@
 @extends('frontend.layouts.main')
 @section('content')
 <section class="container">
-    <div class="d-flex justify-content-center my-4">
+    <div class="d-flex justify-content-center my-4 struktur">
         <img src="/img/illustration-pengumuman.jpeg" alt="Gambar Visi Misi" width="400" height="350" class="img-fluid">
     </div>
     <h3 class="text-center text-judul"><span class="text-header d-block">STRUKTUR</span>HMTI UNIVERSITAS
@@ -14,7 +14,7 @@
                 @foreach ($struktur as $row)
                 <div class="col-md-3 col-6 mt-4 ">
                     <div class="card border-0 text-bg-dark body-struktur ">
-                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img" alt="...">
+                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img img-fluid" alt="...">
                         <div class="card-struktur">
                             <div class=" person-info background-color">
                                 <h5 class="text-white text-uppercase text-center">{{ $row->name }}</h5>

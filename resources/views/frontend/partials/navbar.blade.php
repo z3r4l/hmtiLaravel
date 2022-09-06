@@ -1,10 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-warning bg-with">
   <div class="container">
-    <img src="/img/hmti.jpeg" width="40" height="36" alt="LOGO HMTI">
-    <a class="navbar-brand .navbar-font fw-bold ms-2" href="{{ url('/') }}">HMTI UIS</a>
+    <img src="/img/logoHMTI.svg" class="navbar-logo" alt="LOGO HMTI">
+    <a class="navbar-brand navbar-font ms-2 text-uppercase" href="{{ url('/') }}">HMTI Universitas ibnu sina
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
       aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <i class="bi bi-list"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav .navbar-font ms-auto fs-6 fw-bold">

@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-md-5  mt-3">
                 <a href="/" class="d-flex align-items-center mb-3 link-dark text-decoration-none">
-                    <img src="/img/logoHMTI.svg" class="navbar-logo" alt="LOGO HMTI">
+                    <img src="https://i.postimg.cc/3WMWymN2/LOGO-HMTI-UIS-NEW-2020.png" class="navbar-logo"
+                        alt="LOGO HMTI">
                 </a>
                 <h5 class="fw-bold mt-3">HIMPUNAN MAHASISWA TEKNIK INFORMATIKA UNIVERSITAS IBNU SINA</h5>
                 <p>Jl. Teuku Umar, Lubuk Baja Kota, Kec. Lubuk Baja, Kota Batam, Kepulauan Riau 29444</p>

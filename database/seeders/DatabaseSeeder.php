@@ -49,25 +49,25 @@ class DatabaseSeeder extends Seeder
         Divisi::create([
             'name' => 'Litbang',
             'slug' => 'litbang',
-            'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, unde?'
+            'body' => 'Divisi Litbang adalah Devisi Penelitian dan Pengembangan. Dimana Tugas dan perananya adalah fokus pada pengembangan Softskill dan Hardskill di bidang teknik informatika baik dalam Internal mahasiswa Prodi Teknik Informatika. '
         ]);
 
         Divisi::create([
             'name' => 'Program',
             'slug' => 'program',
-            'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, unde?'
+            'body' => 'divisi program adalah divisi yang menyokong perkembangan infrastruktur organisasi dengan memanfaatkan teknologi digital agar mempermudah dalam mengelola rancangan kegiatan'
         ]);
 
         Divisi::create([
             'name' => 'Humas',
             'slug' => 'humas',
-            'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, unde?'
+            'body' => 'Program kerja devisi humas yaitu HMTI berbagi, HMTI bersama, Fun Day HMTI dan familly gathering HMTI, Menjalin kerjasama dengan perusahaan dan antar kampus.'
         ]);
 
         Divisi::create([
             'name' => 'Media',
             'slug' => 'media',
-            'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, unde?'
+            'body' => 'Divisi yang mempunyai tujuan untuk menghimpun, mengolah dan mempublikasikan informasi mengenai dunia Teknik Informatika dan menjadi wadah bagi mahasiswa Teknik Informatika Universitas Ibnu Sina yang mempunyai minat di bidang multimedia Terutama dalam lingkup HMTI.'
         ]);
 
         // User::factory(3)->create();
@@ -99,6 +99,6 @@ class DatabaseSeeder extends Seeder
         ]);
 
 
-        // Post::factory(25)->create();
+        Post::factory(25)->create();
     }
 }

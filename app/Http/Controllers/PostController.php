@@ -27,4 +27,13 @@ class PostController extends Controller
             'category' => Category::all(),
         ]);
     }
+    public function loadOnScroll(Request $request)
+    {
+        $posts = Post::with(['author', 'category'])->latest()->paginate(10);
+        if ($request->ajax()) {
+            $view = view('frontend.partials.cardKegiatan.index', compact('posts'))->render();
+            return response()->json(['html' => $view]);
+        }
+        return view('frontend.kegiatan.index', compact('posts'));
+    }
 }

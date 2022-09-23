@@ -10,12 +10,25 @@
 </section>
 
 {{-- Start Card Kegiatan --}}
-@include('frontend.partials.cardKegiatan.index')
+
+
+<div class="container">
+    <div id="post-data" class="row d-flex justify-content-center">
+        @include('frontend.partials.cardKegiatan.index')
+    </div>
+</div>
+
+
+<div class="ajax-load text-center my-5" style="display:none">
+    <p><img src="{{ asset('/img/loading.gif') }}" width="40" height="40"> Sedang Memuat</p>
+</div>
 {{-- End Card Kegiatan --}}
 
 {{-- Start Pagination --}}
-<div class="container d-flex justify-content-end mt-4">
+{{-- <div class="container d-flex justify-content-end mt-4">
     {{ $posts->links() }}
-</div>
+</div> --}}
 {{-- End Pagination --}}
+
+<script type="text/javascript" src="/js/infiniteScroll.js"></script>
 @endsection

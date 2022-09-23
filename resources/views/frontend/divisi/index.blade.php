@@ -3,8 +3,7 @@
 <div class="container">
     <div class="row ">
         @foreach ($divisi as $row)
-        <img src="{{ asset('storage/' . $row->image) }}" width="1280" height="400" class="img-fluid card-img-top"
-            alt="...">
+        <img src="{{ asset('storage/' . $row->image) }}" class="rounded-5 card-img-top img-divisi" alt="...">
         <h3 class="text-uppercase about-divisi">Apa Itu Divisi {{ $row->name }} <span>
                 <h1 class="d-inline text-header ">?</h1>
             </span></h3>

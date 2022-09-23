@@ -26,9 +26,9 @@
             </tr>
         </thead>
         <tbody class="text-center">
-            @foreach ($struktur as $row)
+            @foreach ($struktur as $key => $row)
             <tr>
-                <td>{{ $loop->iteration }}</td>
+                <td>{{ $struktur->firstItem() + $key }}</td>
                 <td>{{ $row->name }}</td>
                 <td>{{ $row->jabatan }}</td>
                 <td>{{ $row->divisi->name }}</td>

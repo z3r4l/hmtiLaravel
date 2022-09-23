@@ -5,7 +5,7 @@
 <div class="container">
     <div class="p-4 p-md-5 mb-4 rounded img-fluid hero">
         <div class="text-center mt-5">
-            <img src="/img/logoHMTI.svg" class="ms-auto hero-logo" alt="">
+            <img src="https://i.postimg.cc/3WMWymN2/LOGO-HMTI-UIS-NEW-2020.png" class="ms-auto hero-logo" alt="">
         </div>
         <h1 class="mt-3 text-center text-light hero-font pb-4">HIMPUNAN MAHASISWA<br>TEKNIK
             INFORMATIKA <br>
@@ -22,7 +22,7 @@
                 <div class="col-lg card-stick-info text-center">
                     <img src="/img/icon/kegiatan-icon.svg" alt="icon">
                     <small class="d-block card-stick-text mt-2 text-muted">
-                        <span class="fw-semibold text-dark">00 </span>Kegiatan Aktif
+                        <span class="fw-semibold text-dark">12 </span>Kegiatan Aktif
                     </small>
                 </div>
                 <div class="col-lg card-stick-info text-center">

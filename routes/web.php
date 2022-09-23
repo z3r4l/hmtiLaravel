@@ -26,11 +26,12 @@ use App\Http\Controllers\DashboardStrukturController;
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
-Route::get('/kegiatan', function () {
-    return view('frontend.kegiatan.index', [
-        'posts' => Post::with(['author', 'category'])->latest()->paginate(6),
-    ]);
-});
+Route::get('/kegiatan', [PostController::class, 'loadOnScroll']);
+// Route::get('/kegiatan', function () {
+//     return view('frontend.kegiatan.index', [
+//         'posts' => Post::with(['author', 'category'])->latest()->paginate(6),
+//     ]);
+// });
 
 
 Route::get('/struktur', function () {
@@ -42,7 +43,7 @@ Route::get('/tentang', function () {
     return view('frontend.tentang.index');
 });
 
-Route::get('/categories/{category:slug}', [CategoryController::class, 'index']);
+Route::get('/categories/{category:slug}', [CategoryController::class, 'loadOnScroll']);
 
 Route::get('/divisi/{divisi:slug}', [DivisiController::class, 'index']);
 

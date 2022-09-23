@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-warning bg-with">
   <div class="container">
-    <img src="/img/logoHMTI.svg" class="navbar-logo" alt="LOGO HMTI">
+    <img src="https://i.postimg.cc/3WMWymN2/LOGO-HMTI-UIS-NEW-2020.png" class="navbar-logo" alt="LOGO HMTI">
     <a class="navbar-brand navbar-font ms-2 text-uppercase" href="{{ url('/') }}">HMTI Universitas ibnu sina
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"

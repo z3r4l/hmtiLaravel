@@ -25,9 +25,9 @@
             </tr>
         </thead>
         <tbody class="text-center">
-            @foreach ($post as $row)
+            @foreach ($post as $key => $row)
             <tr>
-                <td>{{ $loop->iteration }}</td>
+                <td>{{ $post->firstItem() + $key }}</td>
                 <td>{{ $row->title }}</td>
                 <td>{{ $row->category->name }}</td>
                 <td>

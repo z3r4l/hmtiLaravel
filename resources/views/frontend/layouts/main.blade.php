@@ -4,6 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Google / Search Engine Tags -->
+<meta itemprop="name" content="HMTI UIS">
+<meta itemprop="description" content="Website HMTI UIS">
+<meta itemprop="image" content="https://i.postimg.cc/3WMWymN2/LOGO-HMTI-UIS-NEW-2020.png">
+
   <meta name="author" content="HMTI UIS">
   <meta name="description" content="Website HMTI UIS">
   <meta name="keywords" content="HMTI UIS Adalah">

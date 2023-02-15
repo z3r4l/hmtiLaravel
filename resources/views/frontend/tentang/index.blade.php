@@ -9,7 +9,7 @@
             <img src="/img/tentang1.jpeg" class="img-fluid card-img rounded mt-1" height="610" width="200" alt="...">
         </div>
         <div class="col-4">
-            <img src="/img/tentang2.jpeg" class="img-fluid card-img rounded mt-2" height="300" width="300" alt="...">
+            <img src="/img/tentang2.jpg" class="img-fluid card-img rounded mt-2" height="300" width="300" alt="...">
             <img src="/img/tentang3.jpeg" class="img-fluid card-img rounded mt-2" height="300" width="300" alt="...">
         </div>
     </div>

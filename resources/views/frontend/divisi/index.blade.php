@@ -25,7 +25,7 @@
                 @foreach ($struktur as $row)
                 <div class="col-md-3 col-6 mt-4 ">
                     <div class="card border-0 text-bg-dark body-struktur ">
-                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img" alt="...">
+                        <img src="{{ asset('storage/' . $row->image) }}" class="person-img img-fluid" alt="...">
                         <div class="card-struktur">
                             <div class=" person-info background-color">
                                 <h5 class="text-white text-uppercase text-center">{{ $row->name }}</h5>

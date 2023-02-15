@@ -8,7 +8,7 @@ use App\Models\Struktur;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 
-class PostController extends Controller
+class aaaaaPostController extends Controller
 {
     public function index()
     {

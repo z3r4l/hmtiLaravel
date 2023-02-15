@@ -10,48 +10,54 @@
 </div>
 @endif
 
-<div class="table-responsive col-lg-10">
-    <div class="d-flex">
-        <a href="/dashboard/strukturs/create" class="btn btn-primary mb-3 ms-auto"><i
-                class="bi bi-person-plus-fill me-2"></i>Tambah Data Anggota</a>
-    </div>
-    <table class="table table-bordered table-sm">
-        <thead class="text-center">
-            <tr>
-                <th scope="col">NO</th>
-                <th scope="col">nama</th>
-                <th scope="col">jabatan</th>
-                <th scope="col">divisi</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody class="text-center">
-            @foreach ($struktur as $key => $row)
-            <tr>
-                <td>{{ $struktur->firstItem() + $key }}</td>
-                <td>{{ $row->name }}</td>
-                <td>{{ $row->jabatan }}</td>
-                <td>{{ $row->divisi->name }}</td>
-                <td>
-                    <a href="/dashboard/strukturs/{{ $row->slug }}" class="text-info ms-2 fs-4"><i
-                            class="bi bi-eye-fill"></i></a>
-                    <a href="/dashboard/strukturs/{{ $row->slug }}/edit" class="text-warning ms-2 fs-4 d-inline"><i
-                            class="bi bi-pencil-square"></i></a>
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive col-lg-12">
+            <div class="d-flex">
+                <a href="/dashboard/strukturs/create" class="btn btn-success mb-3 rounded-5"><i
+                        class="bi bi-person-plus-fill me-2"></i>Tambah Data Anggota</a>
+            </div>
+            <table class="table table-bordered table-sm">
+                <thead class="text-center">
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">nama</th>
+                        <th scope="col">jabatan</th>
+                        <th scope="col">divisi</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    @foreach ($struktur as $key => $row)
+                    <tr>
+                        <td>{{ $struktur->firstItem() + $key }}</td>
+                        <td>{{ $row->name }}</td>
+                        <td>{{ $row->jabatan }}</td>
+                        <td>{{ $row->divisi->name }}</td>
+                        <td>
+                            <a href="/dashboard/strukturs/{{ $row->slug }}" class="text-info ms-2 fs-4"><i
+                                    class="bi bi-eye-fill"></i></a>
+                            <a href="/dashboard/strukturs/{{ $row->slug }}/edit"
+                                class="text-warning ms-2 fs-4 d-inline"><i class="bi bi-pencil-square"></i></a>
 
-                    <form action="/dashboard/strukturs/{{ $row->slug }}" method="post" class="d-inline">
-                        @method('delete')
-                        @csrf
-                        <button class="text-danger bg-body ms-2 fs-4 border-0"
-                            onclick="return confirm('are you sure you want to delete')"><i
-                                class="bi bi-x-circle-fill"></i></button>
-                    </form>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
-    <div class="container d-flex justify-content-end">
-        {{ $struktur->links() }}
+                            <form action="/dashboard/strukturs/{{ $row->slug }}" method="post" class="d-inline">
+                                @method('delete')
+                                @csrf
+                                <button class="text-danger bg-body ms-2 fs-4 border-0"
+                                    onclick="return confirm('are you sure you want to delete')"><i
+                                        class="bi bi-x-circle-fill"></i></button>
+                            </form>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <div class="container d-flex justify-content-end">
+                {{ $struktur->links() }}
+            </div>
+        </div>
     </div>
 </div>
+
+
 @endsection

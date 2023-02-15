@@ -110,7 +110,7 @@ html * {
 /* START HERO */
 .hero {
     background: linear-gradient(0deg, #0a1931 0%, rgba(10, 25, 49, 0) 100%),
-        url(/img/hero-image.jpeg);
+        url(/img/unbg.jpg);
     height: 621px;
     left: 150px;
     top: 100px;

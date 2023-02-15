@@ -23,14 +23,14 @@ class DatabaseSeeder extends Seeder
             'name' => 'program',
             'username' => 'program',
             'email' => 'program@gmail.com',
-            'password' => bcrypt('onefamilyonegoal2013')
+            'password' => bcrypt('zerotoone2022')
         ]);
 
         User::create([
             'name' => 'HMTI',
             'username' => 'HMTI',
             'email' => 'hmti@uis.ac.id',
-            'password' => bcrypt('onefamilyonegoal2013')
+            'password' => bcrypt('zerotoone2022')
         ]);
 
         Struktur::create([

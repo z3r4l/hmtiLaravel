@@ -24,6 +24,9 @@ use App\Http\Controllers\DashboardStrukturController;
 |
 */
 
+
+//************************************************** Start Page Frontend **************************************************//
+
 Route::get('/', [PostController::class, 'index']);
 Route::get('/posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/kegiatan', [PostController::class, 'loadOnScroll']);
@@ -47,21 +50,43 @@ Route::get('/categories/{category:slug}', [CategoryController::class, 'loadOnScr
 
 Route::get('/divisi/{divisi:slug}', [DivisiController::class, 'index']);
 
-// Page Backend
+//************************************************** End Page Frontend **************************************************//
+//************************************************** Start Page Backend **************************************************//
+
+
+//********** Start Page Login **********//
 Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'authenticate']);
 Route::post('/logout', [LoginController::class, 'logout']);
+//********** End Page Login **********//
 
 Route::middleware('auth')->group(function () {
+    //********** Start Page dashboard **********//
     Route::get('/dashboard', function () {
         return view('backend.dashboard.index', [
             'title' => 'Halaman Dashboard',
             'active' => 'dashboard'
         ]);
     });
+    //********** End Page dashboard **********//
 
+    //********** Start Page dashboard Post **********//
     Route::resource('/dashboard/posts', DashboardPostController::class);
+    //********** End Page dashboard Post **********//
+
+    //********** Start Page dashboard Struktur **********//
     Route::resource('/dashboard/strukturs', DashboardStrukturController::class);
+    //********** End Page dashboard Struktur **********//
+
+    //********** Start Page dashboard DIvisi **********//
     Route::resource('/dashboard/divisi', DashboardDivisiController::class);
+    //********** End Page dashboard DIvisi **********//
+
+    //********** Start Page dashboard Category **********//
     Route::resource('/dashboard/category', DashboardCategoryController::class);
+    //********** End Page dashboard Category **********//
+
 });
+
+
+//************************************************** End Page Backend **************************************************//

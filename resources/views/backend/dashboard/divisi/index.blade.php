@@ -10,31 +10,38 @@
 </div>
 @endif
 
-<div class="table-responsive col-lg-10">
-    <table class="table table-bordered table-sm">
-        <thead class="text-center">
-            <tr>
-                <th scope="col">NO</th>
-                <th scope="col">Divisi</th>
-                <th scope="col">Definisi</th>
-                <th scope="col">Action</th>
-            </tr>
-        </thead>
-        <tbody class="text-center">
-            @foreach ($divisies as $row)
-            <tr>
-                <td>{{ $loop->iteration }}</td>
-                <td>{{ $row->name }}</td>
-                <td>{!! $row->body !!}</td>
-                <td>
-                    <a href="/dashboard/divisi/{{ $row->slug }}" class="text-info ms-2 fs-4 "><i
-                            class="bi bi-eye-fill"></i></a>
-                    <a href="/dashboard/divisi/{{ $row->slug }}/edit" class="text-warning ms-2 fs-4 d-inline"><i
-                            class="bi bi-pencil-square"></i></a>
-                </td>
-            </tr>
-            @endforeach
-        </tbody>
-    </table>
+<div class="card">
+    <div class="card-body">
+        <div class="table-responsive col-lg-12">
+            <table class="table table-bordered table-sm">
+                <thead class="text-center">
+                    <tr>
+                        <th scope="col">NO</th>
+                        <th scope="col">Divisi</th>
+                        <th scope="col">Definisi</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    @foreach ($divisies as $row)
+                    <tr>
+                        <td>{{ $loop->iteration }}</td>
+                        <td>{{ $row->name }}</td>
+                        <td>{!! $row->body !!}</td>
+                        <td>
+                            <a href="/dashboard/divisi/{{ $row->slug }}" class="text-info ms-2 fs-4 "><i
+                                    class="bi bi-eye-fill"></i></a>
+                            <a href="/dashboard/divisi/{{ $row->slug }}/edit" class="text-warning ms-2 fs-4 d-inline"><i
+                                    class="bi bi-pencil-square"></i></a>
+                        </td>
+                    </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        </div>
+
+    </div>
 </div>
+
+
 @endsection

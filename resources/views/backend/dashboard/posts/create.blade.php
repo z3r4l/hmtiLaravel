@@ -18,6 +18,7 @@
             </div>
             @enderror
         </div>
+
         <div class="mb-3">
             <label for="slug" class="form-label">Slug</label>
             <input type="text" class="form-control @error('slug')
@@ -29,15 +30,18 @@
             </div>
             @enderror
         </div>
-        <div class="mb-3">
+
+        <div class=" mb-3">
             <label for="category" class="form-label">Category</label>
-            <select class="form-select" name="category_id">
+            <select class="form-control" name="category_id">
+                <option class="text-muted" disabled selected style="display: none">--Select Category--</option>
                 @foreach ($categories as $category)
                 <option value="{{ $category->id }}" {{ old('category_id')==$category->id ? ' selected' : ' ' }} >{{
                     $category->name }}</option>
                 @endforeach
             </select>
         </div>
+
         <div class="mb-3">
             <label for="link" class="form-label">Link Youtube <small>Masukan Bagian Belakang Link Saja | Contoh :
                     https://youtu.be/<span class="text-primary">uehf5EplrUs</span></small></label>
